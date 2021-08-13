@@ -33,7 +33,21 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-1.11.3.min.js",
+              "src/assets/js/jquery-ui-custom.min.js",
+              "src/assets/js/jquery.ascensor.min.js",
+              "src/assets/js/nerveslider.min.js",
+              "src/assets/js/backstretch.min.js",
+              "src/assets/js/wookmark.js",
+              "src/assets/js/portfolio-trigger.js",
+              "src/assets/js/jquery.tooltipster.min.js",
+              "src/assets/js/quovolver.js",
+              "src/assets/js/scrollbar.js",
+              "src/assets/js/lightgallery.js",
+              "src/assets/js/galleries.js",
+              "src/assets/js/home-custom.js"
+            ]
           },
           "configurations": {
             "production": {
