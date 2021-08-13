@@ -31,22 +31,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/normalize.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/transition-animations.css",
+              "src/assets/css/owl.carousel.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/main-light-blue.css"
             ],
             "scripts": [
-              "src/assets/js/jquery-1.11.3.min.js",
-              "src/assets/js/jquery-ui-custom.min.js",
-              "src/assets/js/jquery.ascensor.min.js",
-              "src/assets/js/nerveslider.min.js",
-              "src/assets/js/backstretch.min.js",
-              "src/assets/js/wookmark.js",
-              "src/assets/js/portfolio-trigger.js",
-              "src/assets/js/jquery.tooltipster.min.js",
-              "src/assets/js/quovolver.js",
-              "src/assets/js/scrollbar.js",
-              "src/assets/js/lightgallery.js",
-              "src/assets/js/galleries.js",
-              "src/assets/js/home-custom.js"
+              "src/assets/js/jquery-2.1.3.min.js",
+              "src/assets/js/modernizr.custom.js",
+              "src/assets/js/imagesloaded.pkgd.min.js",
+              "src/assets/js/validator.js",
+              "src/assets/js/jquery.shuffle.min.js",
+              "src/assets/js/masonry.pkgd.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/jquery.hoverdir.js",
+              "src/assets/js/main.js"
             ]
           },
           "configurations": {
