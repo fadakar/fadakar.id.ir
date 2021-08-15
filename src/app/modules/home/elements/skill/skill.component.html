@@ -1,0 +1,11 @@
+
+
+<p class="text-dark fw-500 text-start mb-2">
+  {{ name }}
+  <span class="float-end">{{ percent }}%</span>
+</p>
+<div class="progress progress-sm mb-4">
+  <div class="progress-bar progress-bar-striped" role="progressbar"
+       [ngStyle]="{ width: percent + '%' }"
+       [attr.aria-valuenow]="percent" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
