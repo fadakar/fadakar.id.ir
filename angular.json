@@ -39,7 +39,7 @@
               "src/assets/css/stylesheet.css"
             ],
             "scripts": [
-              "src/assets/js/jquery.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/bootstrap.bundle.min.js",
               "src/assets/js/jquery.easing.min.js",
               "src/assets/js/jquery.appear.min.js",
@@ -49,8 +49,8 @@
               "src/assets/js/typed.min.js",
               "src/assets/js/owl.carousel.min.js",
               "src/assets/js/isotope.pkgd.min.js",
-              "src/assets/js/jquery.magnific-popup.min.js",
-              "src/assets/js/theme.js"
+              "src/assets/js/jquery.magnific-popup.min.js"
+//              "src/assets/js/theme.js"
             ]
           },
           "configurations": {
