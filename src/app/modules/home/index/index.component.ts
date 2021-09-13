@@ -22,17 +22,17 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Rest', 99),
     new Skill('Html/Css', 99),
     new Skill('Bootstrap/Jquery', 90),
+    new Skill('SEO', 90),
     new Skill('Javascript', 90),
     new Skill('TypeScript', 90),
     new Skill('Angular', 85),
     new Skill('Git', 90),
-    new Skill('Scrum/jira', 70),
+    new Skill('Scrum', 70),
     new Skill('ElasticSearch', 50),
     new Skill('Nodejs', 60),
-    new Skill('خلاقیت', 90),
-    new Skill('روحیه تیمی', 90),
-    new Skill('توانایی حل مسئله', 95),
-
+    new Skill('خلاقیت', 99),
+    new Skill('روحیه تیمی', 99),
+    new Skill('توانایی حل مسئله', 99),
   ];
 
   familiarSkills: Skill[] = [
