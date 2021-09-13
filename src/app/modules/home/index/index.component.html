@@ -36,6 +36,7 @@
             <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(about)" style="cursor: pointer">درباره من</a></li>
             <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(service)" style="cursor: pointer">من چه کار هایی کردم</a></li>
             <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(resume)" style="cursor: pointer">رزومه</a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(cert)" style="cursor: pointer">مدارک</a></li>
             <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(contact)" style="cursor: pointer">ارتباط با من</a></li>
           </ul>
         </div>
@@ -68,16 +69,10 @@
           <div class="container my-auto">
             <div class="row">
               <div class="col-12 text-center">
-                <div class="typed-strings">
-                  <p> من یک برنامه نویس هستم.</p>
-                  <p>من بک اند کار میکنم.</p>
-                  <p>به صورت پروژه ای.</p>
-                  <p>به من اعتماد کن.</p>
-                </div>
                 <p class="text-7 fw-500 text-white mb-2 mb-md-3">سلام</p>
                 <h2 class="text-16 fw-600 text-white mb-2 mb-md-3"><span class="typed"></span></h2>
                 <p class="text-5 text-light mb-4">
-                  ساخت برنامه های پیچیده تخصص منه.
+                 به روزمه غلامرضا فداکار خوش آمدید
                 </p>
                 <a (click)="scrollToElement(contact)" class="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2">درخواست
                   همکاری</a>
@@ -322,6 +317,30 @@
     </section>
     <!-- Resume end -->
 
+    <!-- cert
+============================================= -->
+    <section #cert class="section">
+      <div class="container px-lg-5">
+        <!-- Heading -->
+        <div class="position-relative d-flex text-center mb-5">
+          <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">گواهی نامه و افتخارات</h2>
+          <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">مدارک<span
+            class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span></p>
+        </div>
+        <!-- Heading end-->
+
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <img src="assets/cert/angular.png" alt="غلامرضا فداکار گواهی" style="max-width: 100%"/>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <img src="assets/cert/angular2.png" alt="غلامرضا فداکار گواهی" style="max-width: 100%"/>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Resume end -->
 
 
     <!-- Contact Me
