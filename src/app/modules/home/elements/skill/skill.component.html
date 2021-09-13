@@ -5,7 +5,8 @@
   <span class="float-end">{{ percent }}%</span>
 </p>
 <div class="progress progress-sm mb-4">
-  <div class="progress-bar progress-bar-striped" role="progressbar"
-       [ngStyle]="{ width: percent + '%' }"
+  <div class="progress-bar progress-bar-striped progress-bar-animated {{ hexColor ? '' : color}}"
+       role="progressbar"
+       [ngStyle]="{ width: percent + '%' , 'background-color': hexColor ? hexColor : ''}"
        [attr.aria-valuenow]="percent" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
