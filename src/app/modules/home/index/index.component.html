@@ -32,24 +32,18 @@
 
         <div id="header-nav" class="collapse navbar-collapse w-100 my-lg-auto">
           <ul class="navbar-nav text-lg-center my-lg-auto py-lg-3">
-            <li class="nav-item"><a class="nav-link smooth-scroll active" href="#home">معرفی</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">درباره من</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">من چه کار هایی کردم</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#resume">رزومه</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">نمونه کار ها</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">ارتباط با من</a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll active" (click)="scrollToElement(home)" style="cursor: pointer">معرفی</a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(about)" style="cursor: pointer">درباره من</a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(service)" style="cursor: pointer">من چه کار هایی کردم</a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(resume)" style="cursor: pointer">رزومه</a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll" (click)="scrollToElement(contact)" style="cursor: pointer">ارتباط با من</a></li>
           </ul>
         </div>
         <ul class="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">
-          <li class="social-icons-facebook"><a data-bs-toggle="tooltip" title="Facebook" href="http://www.facebook.com/"
-                                               target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-          <li class="social-icons-twitter"><a data-bs-toggle="tooltip" title="Twitter" href="http://www.twitter.com/"
-                                              target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li class="social-icons-linkedin"><a data-bs-toggle="tooltip" title="Linkedin" data-bs-placement="top"
-                                               href="http://www.linkedin.com/" target="_blank"><i
-            class="fab fa-linkedin-in"></i></a></li>
-          <li class="social-icons-github"><a data-bs-toggle="tooltip" title="GitHub" data-bs-placement="top"
-                                             href="http://www.google.com/" target="_blank"><i class="fab fa-github"></i></a>
+          <li class="social-icons-facebook"><a data-bs-toggle="tooltip" title="Facebook" href="http://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="social-icons-twitter"><a data-bs-toggle="tooltip" title="Twitter" href="http://www.twitter.com/"  target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li class="social-icons-linkedin"><a data-bs-toggle="tooltip" title="Linkedin" data-bs-placement="top" href="http://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li class="social-icons-github"><a data-bs-toggle="tooltip" title="GitHub" data-bs-placement="top" href="http://www.google.com/" target="_blank"><i class="fab fa-github"></i></a>
           </li>
         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav">
@@ -66,7 +60,7 @@
 
     <!-- Intro
     ============================================= -->
-    <section id="home">
+    <section #home>
       <div class="hero-wrap">
         <div class="hero-mask opacity-8 bg-dark"></div>
         <div class="hero-bg parallax" style="background-image:url('assets/img/intro-bg-rtl.jpg');"></div>
@@ -85,7 +79,7 @@
                 <p class="text-5 text-light mb-4">
                   ساخت برنامه های پیچیده تخصص منه.
                 </p>
-                <a href="#contact" class="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2">درخواست
+                <a (click)="scrollToElement(contact)" class="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2">درخواست
                   همکاری</a>
               </div>
             </div>
@@ -98,7 +92,7 @@
 
     <!-- About
     ============================================= -->
-    <section id="about" class="section">
+    <section #about class="section">
       <div class="container px-lg-5">
         <!-- Heading -->
         <div class="position-relative d-flex text-center mb-5">
@@ -171,7 +165,7 @@
 
     <!-- Services
     ============================================= -->
-    <section id="services" class="section bg-light">
+    <section  #service class="section bg-light">
       <div class="container px-lg-5">
         <!-- Heading -->
         <div class="position-relative d-flex text-center mb-5">
@@ -189,7 +183,7 @@
                 <div class="featured-box style-3 mb-5">
                   <div class="featured-box-icon text-primary bg-white shadow-sm rounded"><i class="fas fa-palette"></i>
                   </div>
-                  <h3>التصميم الجرافيكي</h3>
+                  <h3>طراحی صفحات وب</h3>
                   <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ
                     القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحً</p>
                 </div>
@@ -198,7 +192,7 @@
                 <div class="featured-box style-3 mb-5">
                   <div class="featured-box-icon text-primary bg-white shadow-sm rounded"><i class="fas fa-desktop"></i>
                   </div>
-                  <h3>تصميم المواقع</h3>
+                  <h3>ساخت پرتال های سازمی</h3>
                   <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ
                     القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحً</p>
                 </div>
@@ -207,7 +201,7 @@
                 <div class="featured-box style-3 mb-5">
                   <div class="featured-box-icon text-primary bg-white shadow-sm rounded"><i
                     class="fas fa-pencil-ruler"></i></div>
-                  <h3>تصميم واجهة المستخدم</h3>
+                  <h3>ساخت نرم افزار های مدیریت مشتری</h3>
                   <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ
                     القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحً</p>
                 </div>
@@ -216,25 +210,7 @@
                 <div class="featured-box style-3 mb-5">
                   <div class="featured-box-icon text-primary bg-white shadow-sm rounded"><i
                     class="fas fa-paint-brush"></i></div>
-                  <h3>تصميم التطبيقات وأمبير. طور</h3>
-                  <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ
-                    القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحً</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="featured-box style-3 mb-5 mb-md-0">
-                  <div class="featured-box-icon text-primary bg-white shadow-sm rounded"><i
-                    class="fas fa-chart-area"></i></div>
-                  <h3>تحليل الأعمال</h3>
-                  <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ
-                    القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحً</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="featured-box style-3 mb-0">
-                  <div class="featured-box-icon text-primary bg-white shadow-sm rounded"><i class="fas fa-bullhorn"></i>
-                  </div>
-                  <h3>تسويق</h3>
+                  <h3>ساخت نرم افزار های حسابداری و انبارداری</h3>
                   <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ
                     القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحً</p>
                 </div>
@@ -248,7 +224,7 @@
 
     <!-- Resume
     ============================================= -->
-    <section id="resume" class="section">
+    <section #resume class="section">
       <div class="container px-lg-5">
         <!-- Heading -->
         <div class="position-relative d-flex text-center mb-5">
@@ -261,53 +237,66 @@
         <div class="row gx-5">
           <!-- My Education -->
           <div class="col-md-6">
-            <h2 class="text-6 fw-600 mb-4">تعليمي</h2>
+            <h2 class="text-6 fw-600 mb-4">مدارک</h2>
             <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2000 - 2004</p>
-              <h3 class="text-5">علوم الكمبيوتر</h3>
-              <p class="text-danger">الجامعة الدولية</p>
-              <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ القرن
-                الخامس عشر الميلادي ، عندما أخذت طابع</p>
+              <p class="badge bg-primary text-2 fw-400">... - 1391</p>
+              <h3 class="text-5">
+               دیپلم
+              </h3>
+              <p class="mb-0">
+                هنرستان شهید قاسمی تهران
+              </p>
             </div>
             <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2005 - 2008</p>
-              <h3 class="text-5">درجة البكلاريوس</h3>
-              <p class="text-danger">جامعة كاليفورنيا</p>
-              <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ القرن
-                الخامس عشر الميلادي ، عندما أخذت طابع</p>
-            </div>
-            <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2009 - 2012</p>
-              <h3 class="text-5">درجة الماجستير</h3>
-              <p class="text-danger">جامعة هارفرد</p>
-              <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ القرن
-                الخامس عشر الميلادي ، عندما أخذت طابع</p>
+              <p class="badge bg-primary text-2 fw-400">1391 - 1394</p>
+              <h3 class="text-5">
+                فوق دیپلم نرم افزار
+              </h3>
+              <p class="mb-0">
+                دانشکده فنی انقلاب اسلامی تهران
+              </p>
             </div>
           </div>
 
           <!-- My Experience -->
           <div class="col-md-6">
-            <h2 class="text-6 fw-600 mb-4">تجربتي</h2>
+            <h2 class="text-6 fw-600 mb-4">فعالیت ها</h2>
             <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2012 - 2013</p>
-              <h3 class="text-5">مصمم الابن</h3>
-              <p class="text-danger">هم الغابات</p>
-              <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ القرن
-                الخامس عشر الميلادي ، عندما أخذت طابع</p>
+              <p class="badge bg-primary text-2 fw-400">1392 - 1393</p>
+              <h3 class="text-5">سماع رایانه کیش</h3>
+              <p class="text-danger">Backend Developer</p>
+              <p class="mb-0">
+                فعالت به عنوان برنامه نویس بک اند
+                <br>
+                علت ترک : تمایل به فعالت به صورت فریلنس
+              </p>
             </div>
             <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2014 - 2016</p>
-              <h3 class="text-5">مصمم المنتج الابن</h3>
-              <p class="text-danger">دريبل</p>
-              <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ القرن
-                الخامس عشر الميلادي ، عندما أخذت طابع</p>
+              <p class="badge bg-primary text-2 fw-400">1393 - 1396</p>
+              <h3 class="text-5">فریلنسر</h3>
+              <p class="text-danger">Fullstack Developer</p>
+              <p class="mb-0">
+                فعالت به صورت پروژه ای و فریلنسر
+              </p>
             </div>
             <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2017 - 2019</p>
-              <h3 class="text-5">مصمم المنتج</h3>
-              <p class="text-danger">أدوبي</p>
-              <p class="mb-0">ببساطة، نص وهمي للطباعة وصناعة أدوات الطباعة. كان النص الوهمي القياسي في الصناعة منذ القرن
-                الخامس عشر الميلادي ، عندما أخذت طابع</p>
+              <p class="badge bg-primary text-2 fw-400">1396 - 1399</p>
+              <h3 class="text-5">شرکت ایفاد</h3>
+              <p class="text-danger">مدیر پروژه</p>
+              <p class="mb-0">
+                فعالت به عنوان مدیر پروژه
+                <br>
+                علت ترک : عدم فعالت شرکت به علت نوسانات ارز
+              </p>
+            </div>
+
+            <div class="bg-white border rounded p-4 mb-4">
+              <p class="badge bg-primary text-2 fw-400">1399 - تا کنون</p>
+              <h3 class="text-5">شرکت همیار صنعت</h3>
+              <p class="text-danger">مدیر پروژه</p>
+              <p class="mb-0">
+                فعالت به عنوان مدیر پروژه
+              </p>
             </div>
           </div>
         </div>
@@ -321,133 +310,23 @@
             </div>
           </div>
 
+          <h3 class="text-6 fw-300 mt-4 mb-4">اشنا به مهارت ها</h3>
+          <div class="row">
+            <div class="col-6" *ngFor="let skill of familiarSkills">
+              <app-elements-skill [name]="skill.name" [percent]="skill.percent" [hexColor]="'#8fcb5b'"></app-elements-skill>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
     <!-- Resume end -->
 
-    <!-- Portfolio
-    ============================================= -->
-    <section id="portfolio" class="section bg-light">
-      <div class="container px-lg-5">
-        <!-- Heading -->
-        <div class="position-relative d-flex text-center mb-5">
-          <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">پروژه ها</h2>
-          <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">
-            اخرین نمونه کار ها
-            <span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span></p>
-        </div>
-        <!-- Heading end-->
 
-        <!-- Filter Menu -->
-        <ul class="portfolio-menu nav nav-tabs justify-content-center border-bottom-0 mb-5">
-          <li class="nav-item"><a data-filter="*" class="nav-link active" href="">همه</a></li>
-          <li class="nav-item"><a data-filter=".design" href="" class="nav-link">وب</a></li>
-          <li class="nav-item"><a data-filter=".brand" href="" class="nav-link">نرم افزار</a></li>
-        </ul>
-        <!-- Filter Menu end -->
-        <div class="portfolio popup-ajax-gallery">
-          <div class="row portfolio-filter g-4">
-            <div class="col-sm-6 col-lg-4 brand">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"><img class="img-fluid d-block" src="images/projects/project-1.jpg"
-                                                        alt="">
-                  <div class="portfolio-overlay"><a class="popup-ajax stretched-link"
-                                                    href="ajax/portfolio-ajax-project-rtl-1.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">عنوان المشروع</h5>
-                      <span class="text-light">فئة</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 design">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"><img class="img-fluid d-block" src="images/projects/project-2.jpg"
-                                                        alt="">
-                  <div class="portfolio-overlay"><a class="popup-ajax stretched-link"
-                                                    href="ajax/portfolio-ajax-project-rtl-2.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">عنوان المشروع</h5>
-                      <span class="text-light">فئة</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 artwork photos">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"><img class="img-fluid d-block" src="images/projects/project-3.jpg"
-                                                        alt="">
-                  <div class="portfolio-overlay"><a class="popup-ajax stretched-link"
-                                                    href="ajax/portfolio-ajax-project-rtl-3.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">عنوان المشروع</h5>
-                      <span class="text-light">فئة</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 artwork brand photos">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"><img class="img-fluid d-block" src="images/projects/project-4.jpg"
-                                                        alt="">
-                  <div class="portfolio-overlay"><a class="popup-ajax stretched-link"
-                                                    href="ajax/portfolio-ajax-project-rtl-4.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">عنوان المشروع</h5>
-                      <span class="text-light">فئة</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 design">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"><img class="img-fluid d-block" src="images/projects/project-5.jpg"
-                                                        alt="">
-                  <div class="portfolio-overlay"><a class="popup-ajax stretched-link"
-                                                    href="ajax/portfolio-ajax-project-rtl-5.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">عنوان المشروع</h5>
-                      <span class="text-light">فئة</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 brand">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"><img class="img-fluid d-block" src="images/projects/project-6.jpg"
-                                                        alt="">
-                  <div class="portfolio-overlay"><a class="popup-ajax stretched-link"
-                                                    href="ajax/portfolio-ajax-project-rtl-6.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">عنوان المشروع</h5>
-                      <span class="text-light">فئة</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 design photos">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"><img class="img-fluid d-block" src="images/projects/project-7.jpg"
-                                                        alt="">
-                  <div class="portfolio-overlay"><a class="popup-ajax stretched-link"
-                                                    href="ajax/portfolio-ajax-project-rtl-7.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">عنوان المشروع</h5>
-                      <span class="text-light">فئة</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Portfolio end -->
 
     <!-- Contact Me
     ============================================= -->
-    <section id="contact" class="section bg-light">
+    <section #contact class="section bg-light">
       <div class="container px-lg-5">
         <!-- Heading -->
         <div class="position-relative d-flex text-center mb-5">
