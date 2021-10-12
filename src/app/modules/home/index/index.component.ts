@@ -12,7 +12,6 @@ export class HomeIndexComponent implements OnInit {
 
   skills: Skill[] = [
     new Skill('PHP', 99),
-    new Skill('طراحی', 70),
     new Skill('Laravel', 99),
     new Skill('Lumen', 99),
     new Skill('MySql', 99),
@@ -30,6 +29,7 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Scrum', 70),
     new Skill('ElasticSearch', 50),
     new Skill('Nodejs', 60),
+    new Skill('تحلیل و طراحی نرم افزاری', 99),
     new Skill('خلاقیت', 99),
     new Skill('روحیه تیمی', 99),
     new Skill('توانایی حل مسئله', 99),
