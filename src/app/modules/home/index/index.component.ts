@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Skill} from "../_models/Skill";
 import * as $ from 'jquery';
 
@@ -52,7 +52,13 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Docker', 40),
   ];
 
-  constructor() { }
+
+  @ViewChild('menuBtn') menuBtn: ElementRef;
+  @ViewChild('navMenu') navMenu: ElementRef;
+
+  constructor() {
+  }
+
   ngOnInit(): void {
 
     $(window).on('load', function () {
@@ -65,5 +71,8 @@ export class HomeIndexComponent implements OnInit {
 
   scrollToElement($element: HTMLElement) {
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+    if (this.navMenu.nativeElement.classList.contains('show')) {
+      this.menuBtn.nativeElement.click();
+    }
   }
 }

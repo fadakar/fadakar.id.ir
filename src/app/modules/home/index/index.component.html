@@ -31,7 +31,7 @@
         </a>
         <!-- Logo End -->
 
-        <div id="header-nav" class="collapse navbar-collapse w-100 my-lg-auto">
+        <div id="header-nav" class="collapse navbar-collapse w-100 my-lg-auto" #navMenu>
           <ul class="navbar-nav text-lg-center my-lg-auto py-lg-3">
             <li class="nav-item"><a class="nav-link smooth-scroll active" (click)="scrollToElement(home)"
                                     style="cursor: pointer">معرفی</a></li>
@@ -73,7 +73,7 @@
           </li>
 
         </ul>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" #menuBtn>
           <span></span><span></span><span></span></button>
       </div>
     </nav>
