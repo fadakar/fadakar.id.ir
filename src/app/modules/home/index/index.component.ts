@@ -25,6 +25,7 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Javascript', 90),
     new Skill('TypeScript', 90),
     new Skill('Angular', 85),
+    new Skill('Webpack', 90),
     new Skill('Git', 90),
     new Skill('Scrum', 70),
     new Skill('ElasticSearch', 50),
