@@ -50,7 +50,6 @@
               "src/assets/js/owl.carousel.min.js",
               "src/assets/js/isotope.pkgd.min.js",
               "src/assets/js/jquery.magnific-popup.min.js"
-//              "src/assets/js/theme.js"
             ]
           },
           "configurations": {
@@ -124,6 +123,5 @@
         }
       }
     }
-  },
-  "defaultProject": "app"
+  }
 }
