@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Odor Mean Chey
+- Font Author: Copyright 2019 The Odor Mean Chey Project Authors (https://github.com/danhhong/OdorMeanChey)
+- Font Source: http://fonts.gstatic.com/s/odormeanchey/v27/raxkHiKDttkTe1aOGcJMR1A_4mrY2zqUKafv.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
