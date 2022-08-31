@@ -22,6 +22,8 @@ export class HomeIndexComponent implements OnInit {
     new Skill('TypeScript', Level.expert),
     new Skill('Angular', Level.expert),
     new Skill('Git', Level.expert),
+    new Skill('Redis', Level.expert),
+    new Skill('Design Patterns', Level.expert),
     new Skill('Scrum/Developer', Level.expert),
     new Skill('Docker', Level.expert),
     new Skill('تحلیل و طراحی نرم افزاری', Level.expert),
