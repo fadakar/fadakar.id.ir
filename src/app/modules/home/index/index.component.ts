@@ -32,6 +32,7 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Scrum/Developer', Level.advance),
     new Skill('ElasticSearch', Level.advance),
     new Skill('Docker', Level.expert),
+    new Skill('Docker Swarm', Level.advance),
     new Skill('Kubernetes', Level.beginner),
     new Skill('CI/CD', Level.beginner),
     new Skill('تحلیل و طراحی نرم افزاری', Level.expert),
