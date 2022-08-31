@@ -21,7 +21,7 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Nginx', Level.advance),
     new Skill('Rest/Restful', Level.expert),
     new Skill('Html/Css', Level.expert),
-    new Skill('Tailwind', Level.expert),
+    new Skill('TailwindCss', Level.expert),
     new Skill('Bootstrap', Level.expert),
     new Skill('SEO', Level.advance),
     new Skill('Javascript', Level.advance),
