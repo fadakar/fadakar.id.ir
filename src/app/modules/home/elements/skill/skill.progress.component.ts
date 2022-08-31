@@ -1,17 +1,17 @@
+
+
+
 import {Component, OnInit, Input} from '@angular/core';
 import {Level} from '../../_models/level';
 
 @Component({
-  selector: 'app-elements-skill',
-  templateUrl: './skill.component.html',
-  styleUrls: ['skill.component.scss']
+  selector: 'app-elements-skill-progress',
+  templateUrl: './skill.progress.component.html',
+  styleUrls: ['skill.progress.component.scss']
 })
-export class SkillComponent implements OnInit {
+export class SkillProgressComponent implements OnInit {
 
-  @Input() name: string;
   @Input() level: Level;
-  @Input() color: 'bg-success' | 'bg-info' | 'bg-danger' | 'bg-warning' | 'bg-light' | 'bg-dark' = 'bg-success'
-  @Input() hexColor: string;
 
   constructor() {
   }

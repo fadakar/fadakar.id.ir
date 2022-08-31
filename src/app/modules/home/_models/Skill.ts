@@ -1,9 +1,10 @@
+import {Level} from './level';
 
 
-export class Skill{
+export class Skill {
   constructor(
     public name: string,
-    public percent: number,
+    public level: Level,
   ) {
   }
 }

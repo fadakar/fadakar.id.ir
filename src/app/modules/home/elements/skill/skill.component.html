@@ -1,12 +1,17 @@
-
-
-<p class="text-dark fw-500 text-start mb-2">
+<div class="text-dark fw-500 text-start mb-2 px-2">
   {{ name }}
-  <span class="float-end">{{ percent }}%</span>
-</p>
-<div class="progress progress-sm mb-4">
-  <div class="progress-bar progress-bar-striped progress-bar-animated {{ hexColor ? '' : color}}"
-       role="progressbar"
-       [ngStyle]="{ width: percent + '%' , 'background-color': hexColor ? hexColor : ''}"
-       [attr.aria-valuenow]="percent" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="float-end">
+      <span
+        [ngClass]="{
+        'level-beginner': level === Level.beginner,
+        'level-medium': level === Level.medium,
+        'level-advance': level === Level.advance,
+        'level-expert': level === Level.expert
+        }"
+        [innerHTML]="getLevelBudget(level)"></span>
+  </div>
 </div>
+<div class="row">
+  <app-elements-skill-progress [level]="level"></app-elements-skill-progress>
+</div>
+
