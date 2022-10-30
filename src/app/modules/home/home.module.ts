@@ -6,6 +6,7 @@ import {ThemeModule} from "../theme/theme.module";
 import {HomeComponent} from "./home.component";
 import {SkillComponent} from "./elements/skill/skill.component";
 import {SkillProgressComponent} from './elements/skill/skill.progress.component';
+import {Theme2Module} from '../theme2/theme2.module';
 
 
 @NgModule({
@@ -15,11 +16,12 @@ import {SkillProgressComponent} from './elements/skill/skill.progress.component'
     SkillComponent,
     SkillProgressComponent,
   ],
-  imports: [
-    HomeRoutingModule,
-    CommonModule,
-    ThemeModule,
-  ]
+    imports: [
+        HomeRoutingModule,
+        CommonModule,
+        ThemeModule,
+        Theme2Module,
+    ]
 })
 export class HomeModule {
 }
