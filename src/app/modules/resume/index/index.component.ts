@@ -37,7 +37,6 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Redis', Level.advance),
     new Skill('RabbitMQ', Level.advance),
     new Skill('Design Patterns', Level.expert),
-    new Skill('SEO', Level.advance),
     new Skill('ElasticSearch', Level.advance),
   ];
 
