@@ -56,6 +56,27 @@
   </div>
 
   <div class="col-span-2 flex flex-col gap-4 mt-4 lg:mt-0">
+    <div
+      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 ">
+
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-4">
+          <div class="text-gray-700 font-bold">About Me</div>
+          <p class="text-gray-500 leading-7 px-2">
+            I started programming in 2009 at the age of 17, I started programming in VB6 language and after that I
+            started working with
+            C++ and entered the world of OOP I started working with PHP in 2013 and after that, I got to know the
+            CodeIgniter framework.
+            I have been working with it for a year, I am currently expanding my programs with Laravel and I have been
+            with it since
+            version 4.2, and I have created programs in the fields of accounting, warehousing, and customer management.
+            I am very
+            interested in learning and teaching, during the week I use my free time to learn, exercise and play.
+          </p>
+        </div>
+      </div>
+
+    </div>
 
     <div
       class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 ">
@@ -66,7 +87,7 @@
         </div>
       </div>
 
-      <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6 px-2">
         <div *ngFor="let skill of clientSideSkill">
           <app-elements-skill [name]="skill.name" [level]="skill.level"></app-elements-skill>
         </div>
@@ -83,7 +104,7 @@
         </div>
       </div>
 
-      <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6 px-2">
         <div *ngFor="let skill of serverSideSkill">
           <app-elements-skill [name]="skill.name" [level]="skill.level"></app-elements-skill>
         </div>
@@ -101,7 +122,7 @@
         </div>
       </div>
 
-      <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6 px-2">
         <div *ngFor="let skill of developmentAndOperationsSkill">
           <app-elements-skill [name]="skill.name" [level]="skill.level"></app-elements-skill>
         </div>
