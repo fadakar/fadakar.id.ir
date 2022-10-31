@@ -5,6 +5,7 @@ import {Theme2HeaderComponent} from './header/theme2.header.component';
 import {Theme2LayoutComponent} from './layout/theme2.layout.component';
 import {Theme2FooterComponent} from './footer/theme2.footer.component';
 import {Theme2NavbarComponent} from './navbar/theme2.navbar.component';
+import {Theme2BottomBarComponent} from './bottomBar/theme2.bottom.bar.component';
 
 
 
@@ -13,7 +14,8 @@ import {Theme2NavbarComponent} from './navbar/theme2.navbar.component';
     Theme2HeaderComponent,
     Theme2LayoutComponent,
     Theme2FooterComponent,
-    Theme2NavbarComponent
+    Theme2NavbarComponent,
+    Theme2BottomBarComponent
 
   ],
   exports: [

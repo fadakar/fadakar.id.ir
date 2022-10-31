@@ -1,5 +1,9 @@
-<app-theme2-header></app-theme2-header>
-<app-theme2-navbar></app-theme2-navbar>
-<router-outlet></router-outlet>
-<app-theme2-footer></app-theme2-footer>
-
+<div class="bg-gray-100 min-h-screen">
+  <app-theme2-header></app-theme2-header>
+  <app-theme2-navbar></app-theme2-navbar>
+  <div class="lg:max-w-7xl lg:mx-auto py-2  px-4 lg:px-12">
+    <router-outlet></router-outlet>
+  </div>
+  <app-theme2-bottom-bar></app-theme2-bottom-bar>
+  <app-theme2-footer></app-theme2-footer>
+</div>
