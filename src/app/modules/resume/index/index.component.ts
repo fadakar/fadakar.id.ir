@@ -54,10 +54,10 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Jenkins', Level.medium),
     new Skill('Ansible', Level.medium),
 
-    new Skill('تحلیل و طراحی نرم افزاری', Level.expert),
-    new Skill('خلاقیت', Level.expert),
-    new Skill('روحیه تیمی', Level.expert),
-    new Skill('توانایی حل مسئله', Level.expert),
+    new Skill('Software analysis and design', Level.expert),
+    new Skill('Creativity', Level.expert),
+    new Skill('Team work', Level.expert),
+    new Skill('Problem solving ability', Level.expert),
 
   ];
 
