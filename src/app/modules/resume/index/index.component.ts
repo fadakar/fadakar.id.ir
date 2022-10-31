@@ -62,12 +62,6 @@ export class HomeIndexComponent implements OnInit {
   ];
 
 
-
-
-
-
-
-
   familiarSkills: Skill[] = [
     new Skill('C#', Level.expert),
     new Skill('C#/WindowsForm', Level.expert),
@@ -77,8 +71,10 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Symfony', Level.advance),
     new Skill('Python', Level.advance),
 
-    new Skill('++C', Level.medium),
+    new Skill('C++', Level.medium),
+    new Skill('Node.js', Level.medium),
     new Skill('Express.js', Level.medium),
+    new Skill('Nest.js', Level.medium),
     new Skill('ASP.NET', Level.medium),
     new Skill('CodeIgniter', Level.medium),
     new Skill('Arduino', Level.medium),
