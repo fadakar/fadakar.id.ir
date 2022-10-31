@@ -32,7 +32,7 @@
       <div
         class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 ">
 
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-4">
           <div class="flex ">
             <div class="text-gray-700 font-bold">Information</div>
           </div>
@@ -59,7 +59,7 @@
       <div
         class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 ">
 
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-4">
           <div class="flex ">
             <div class="text-gray-700 font-bold">Contact Me</div>
           </div>
@@ -206,6 +206,42 @@
 
     </div>
 
+    <div
+      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
+
+      <div class="flex flex-col gap-2">
+        <div class="flex ">
+          <div class="text-gray-700 font-bold">Languages</div>
+        </div>
+      </div>
+
+
+      <div class="flex flex-col gap-2">
+
+        <div class="flex flex-col gap-2 px-2 mt-4">
+          <div class="text-gray-600">Persian</div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 px-2">
+            <app-elements-skill [name]="'reading'" [level]="Level.expert"></app-elements-skill>
+            <app-elements-skill [name]="'writing'" [level]="Level.expert"></app-elements-skill>
+            <app-elements-skill [name]="'speaking'" [level]="Level.expert"></app-elements-skill>
+            <app-elements-skill [name]="'listening'" [level]="Level.expert"></app-elements-skill>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 px-2 mt-4">
+          <div class="text-gray-600">English</div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 px-2">
+            <app-elements-skill [name]="'reading'" [level]="Level.expert"></app-elements-skill>
+            <app-elements-skill [name]="'writing'" [level]="Level.advance"></app-elements-skill>
+            <app-elements-skill [name]="'speaking'" [level]="Level.medium"></app-elements-skill>
+            <app-elements-skill [name]="'listening'" [level]="Level.advance"></app-elements-skill>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
 
   </div>
 </div>

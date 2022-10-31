@@ -54,7 +54,7 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Jenkins', Level.medium),
     new Skill('Ansible', Level.medium),
 
-    new Skill('Software analysis and design', Level.expert),
+    new Skill('Analysis & Design', Level.expert),
     new Skill('Creativity', Level.expert),
     new Skill('Team work', Level.expert),
     new Skill('Problem solving ability', Level.expert),
@@ -90,6 +90,10 @@ export class HomeIndexComponent implements OnInit {
   @ViewChild('navMenu') navMenu: ElementRef;
 
   constructor() {
+  }
+
+  get Level(): any{
+    return Level;
   }
 
   ngOnInit(): void {
