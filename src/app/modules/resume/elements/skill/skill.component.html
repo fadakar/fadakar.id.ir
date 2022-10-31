@@ -1,17 +1,8 @@
-<div class="text-dark fw-500 text-start mb-2 px-2">
-  {{ name }}
-  <div class="float-end">
-      <span
-        [ngClass]="{
-        'level-beginner': level === Level.beginner,
-        'level-medium': level === Level.medium,
-        'level-advance': level === Level.advance,
-        'level-expert': level === Level.expert
-        }"
-        [innerHTML]="getLevelBudget(level)"></span>
-  </div>
-</div>
-<div class="row">
-  <app-elements-skill-progress [level]="level"></app-elements-skill-progress>
-</div>
+<div class="flex flex-col">
 
+  <div class="mb-2 px-2 flex justify-between font-bold text-gray-500 text-sm">
+    {{ name }}
+  </div>
+  <app-elements-skill-progress [level]="level"></app-elements-skill-progress>
+
+</div>

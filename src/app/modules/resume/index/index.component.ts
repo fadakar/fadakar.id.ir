@@ -11,40 +11,62 @@ import {Level} from '../_models/level';
 })
 export class HomeIndexComponent implements OnInit {
 
-  skills: Skill[] = [
+
+  clientSideSkill: Skill[] =  [
+    new Skill('Html', Level.expert),
+    new Skill('CSS', Level.expert),
+    new Skill('Javascript', Level.expert),
+    new Skill('Typescript', Level.expert),
+    new Skill('Angular', Level.expert),
+    new Skill('Rxjs', Level.expert),
+    new Skill('Vuejs/Vuex', Level.advance),
+    new Skill('Tailwindcss', Level.expert),
+    new Skill('Bootstrap', Level.expert),
+
+  ];
+
+
+  serverSideSkill: Skill[] = [
     new Skill('PHP', Level.expert),
     new Skill('Laravel', Level.expert),
-    new Skill('MySql', Level.expert),
-    new Skill('Html/Css', Level.expert),
+    new Skill('SQL', Level.expert),
+    new Skill('Mysql', Level.expert),
     new Skill('Rest/Restful', Level.expert),
-    new Skill('TailwindCss', Level.expert),
-    new Skill('Bootstrap', Level.expert),
-    new Skill('TypeScript', Level.expert),
-    new Skill('Angular', Level.expert),
-    new Skill('Git', Level.expert),
+    new Skill('Nginx', Level.advance),
+    new Skill('Apache', Level.advance),
     new Skill('Redis', Level.expert),
     new Skill('Design Patterns', Level.expert),
-    new Skill('Scrum/Developer', Level.expert),
+    new Skill('SEO', Level.advance),
+    new Skill('ElasticSearch', Level.advance),
+  ];
+
+
+  developmentAndOperationsSkill: Skill[] =  [
+    new Skill('Linux OS', Level.advance),
+    new Skill('Bash', Level.advance),
+    new Skill('Git', Level.expert),
+    new Skill('Github/GitLab', Level.expert),
     new Skill('Docker', Level.expert),
+    new Skill('Docker Swarm', Level.advance),
+    new Skill('Agile/Scrum/Kanban', Level.expert),
+    new Skill('Kubernetes', Level.medium),
+    new Skill('CI/CD', Level.medium),
+    new Skill('Jenkins', Level.medium),
+    new Skill('Ansible', Level.medium),
+
     new Skill('تحلیل و طراحی نرم افزاری', Level.expert),
     new Skill('خلاقیت', Level.expert),
     new Skill('روحیه تیمی', Level.expert),
     new Skill('توانایی حل مسئله', Level.expert),
 
-    new Skill('Lumen', Level.advance),
-    new Skill('Mongodb', Level.advance),
-    new Skill('LPIC1', Level.advance),
-    new Skill('Nginx', Level.advance),
-    new Skill('SEO', Level.advance),
-    new Skill('Javascript', Level.advance),
-    new Skill('Webpack', Level.advance),
-    new Skill('ElasticSearch', Level.advance),
-    new Skill('Docker Swarm', Level.advance),
-
-    new Skill('Kubernetes', Level.beginner),
-    new Skill('CI/CD', Level.beginner),
-
   ];
+
+
+
+
+
+
+
 
   familiarSkills: Skill[] = [
     new Skill('C#', Level.expert),
@@ -63,8 +85,6 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Spring', Level.medium),
     new Skill('JPA', Level.medium),
     new Skill('C#/Wpf', Level.medium),
-    new Skill('jenkins', Level.medium),
-    new Skill('ansible', Level.medium),
     new Skill('CakePhp', Level.beginner),
 
   ];

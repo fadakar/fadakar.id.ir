@@ -1,6 +1,3 @@
-
-
-
 import {Component, OnInit, Input} from '@angular/core';
 import {Level} from '../../_models/level';
 
@@ -23,16 +20,16 @@ export class SkillProgressComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getLevelBudget(level: Level): string {
-    switch (level) {
+  getWidth(): string {
+    switch (this.level) {
       case Level.beginner:
-        return 'مبتدی';
+        return '25%';
       case Level.medium:
-        return 'متوسط';
+        return '50%';
       case Level.advance:
-        return 'پیشرفته';
+        return '75%';
       case Level.expert:
-        return 'حرفه ای';
+        return '100%';
     }
   }
 }
