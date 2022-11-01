@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,ts,scss}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'print': {'raw': 'print'},
+      }
+    },
   },
   plugins: [],
 }

@@ -9,12 +9,12 @@
 
       <div
         class=" bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden">
-        <img class="rounded-t-lg w-full select-none" draggable="false" src="/assets/img/1.jpg"
+        <img class="print:hidden rounded-t-lg w-full select-none" draggable="false" src="/assets/img/1.jpg"
              alt="programmer"/>
 
         <div class="relative w-[7rem]">
           <img
-            class="absolute top-[-70px] left-[35px]  rounded-xl ring-2 ring-white outline-2 outline-gray-400"
+            class="absolute top-[-70px] left-[35px] print:static print:ml-7 print:mt-7  rounded-xl ring-2 ring-white outline-2 outline-gray-400"
             draggable="false" src="/assets/img/profile.jpeg" alt="غلامرضا فداکار">
         </div>
 
@@ -22,7 +22,7 @@
           <h5 class=" text-xl tracking-tight text-gray-800 dark:text-white">Gholamreza Fadakar</h5>
           <p class="pl-1 text-md text-gray-500 dark:text-gray-400">Full Stack Senior Developer</p>
         </div>
-        <div class="flex flex-col px-8 pt-2 pb-5">
+        <div class="flex flex-col px-8 pt-2 pb-5 print:hidden">
           <a
             class="w-full text-center focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  hover:cursor-pointer transition-all ease-in-out">
             Download PDF
@@ -366,11 +366,11 @@
     </app-card>
 
 
-    <div class="text-center">
+    <div class="text-center print:hidden">
       <a class="text-gray-400 text-sm" target="_blank" href="https://github.com/fadakar/fadakar.id.ir">
         Fork Template On Github
       </a>
     </div>
-    <div class="mt-2 lg:mt-0"></div>
+    <div class="mt-2 lg:mt-0 print:hidden"></div>
   </div>
 </div>
