@@ -36,74 +36,64 @@
       <!----------------------- section Information ----------------------->
       <!------------------------------------------------------------------->
 
-      <div
-        class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 ">
+      <app-card>
+        <div title>Information</div>
 
-        <div class="flex flex-col gap-4">
-          <div class="flex ">
-            <div class="text-gray-700 font-bold">Information</div>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="text-gray-400">Location</div>
-            <div class="text-gray-700">Iran,Tehran</div>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="text-gray-400">Experience</div>
-            <div class="text-gray-700">+11 year</div>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="text-gray-400">Birthday</div>
-            <div class="text-gray-700">1994</div>
-          </div>
-
-
+        <div class="flex justify-between">
+          <div class="text-gray-400">Location</div>
+          <div class="text-gray-700">Iran,Tehran</div>
         </div>
-      </div>
+
+        <div class="flex justify-between">
+          <div class="text-gray-400">Experience</div>
+          <div class="text-gray-700">+11 year</div>
+        </div>
+
+        <div class="flex justify-between">
+          <div class="text-gray-400">Birthday</div>
+          <div class="text-gray-700">1994</div>
+        </div>
+
+      </app-card>
+
+
 
       <!------------------------------------------------------------------->
       <!----------------------- section Contact Me ------------------------>
       <!------------------------------------------------------------------->
+      <app-card>
+        <div title>Contact Me</div>
 
-      <div
-        class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 ">
-
-        <div class="flex flex-col gap-4">
-          <div class="flex ">
-            <div class="text-gray-700 font-bold">Contact Me</div>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="text-gray-400">Phone</div>
-            <a class="text-gray-700" target="_blank"
-               href="tel:+989190074754">+989190074754</a>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="text-gray-400">Email</div>
-            <a class="text-gray-700" target="_blank"
-               href="mailto:fadakargholamreza@gmail.com">fadakargholamreza@gmail.com</a>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="text-gray-400">Personal Website</div>
-            <a class="text-gray-700" target="_blank" href="https://fdkr.ir">https://fdkr.ir</a>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="text-gray-400">Github</div>
-            <a class="text-gray-700" target="_blank" href="https://www.github.com/fadakar">Visit Github</a>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="text-gray-400">Linkedin</div>
-            <a class="text-gray-700" target="_blank" href="https://ir.linkedin.com/in/gholamreza-fadakar-759300b1">Visit
-              Linkedin</a>
-          </div>
+        <div class="flex justify-between">
+          <div class="text-gray-400">Phone</div>
+          <a class="text-gray-700" target="_blank"
+             href="tel:+989190074754">+989190074754</a>
         </div>
-      </div>
+
+        <div class="flex justify-between">
+          <div class="text-gray-400">Email</div>
+          <a class="text-gray-700" target="_blank"
+             href="mailto:fadakargholamreza@gmail.com">fadakargholamreza@gmail.com</a>
+        </div>
+
+        <div class="flex justify-between">
+          <div class="text-gray-400">Personal Website</div>
+          <a class="text-gray-700" target="_blank" href="https://fdkr.ir">https://fdkr.ir</a>
+        </div>
+
+        <div class="flex justify-between">
+          <div class="text-gray-400">Github</div>
+          <a class="text-gray-700" target="_blank" href="https://www.github.com/fadakar">Visit Github</a>
+        </div>
+
+        <div class="flex justify-between">
+          <div class="text-gray-400">Linkedin</div>
+          <a class="text-gray-700" target="_blank" href="https://ir.linkedin.com/in/gholamreza-fadakar-759300b1">Visit
+            Linkedin</a>
+        </div>
+
+      </app-card>
+
     </div>
 
   </div>
@@ -113,126 +103,79 @@
     <!------------------------------------------------------------------->
     <!----------------------- section About Me -------------------------->
     <!------------------------------------------------------------------->
-
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex flex-col gap-4">
-          <div class="text-gray-700 font-bold">About Me</div>
-          <p class="text-gray-500 text-sm leading-7 px-2">
-            I started programming in 2009 at the age of 17, I started programming in VB6 language and after that I
-            started working with
-            C++ and entered the world of OOP I started working with PHP in 2013 and after that, I got to know the
-            CodeIgniter framework.
-            I have been working with it for a year, I am currently expanding my programs with Laravel and I have been
-            with it since
-            version 4.2, and I have created programs in the fields of accounting, warehousing, and customer management.
-            I am very
-            interested in learning and teaching, during the week I use my free time to learn, exercise and play.
-          </p>
-        </div>
-      </div>
-
-    </div>
+    <app-card>
+      <div title>About Me</div>
+      <p class="text-gray-500 text-sm leading-7 px-2">
+        I started programming in 2009 at the age of 17, I started programming in VB6 language and after that I
+        started working with
+        C++ and entered the world of OOP I started working with PHP in 2013 and after that, I got to know the
+        CodeIgniter framework.
+        I have been working with it for a year, I am currently expanding my programs with Laravel and I have been
+        with it since
+        version 4.2, and I have created programs in the fields of accounting, warehousing, and customer management.
+        I am very
+        interested in learning and teaching, during the week I use my free time to learn, exercise and play.
+      </p>
+    </app-card>
 
     <!------------------------------------------------------------------->
     <!----------------------- section Client Side ----------------------->
     <!------------------------------------------------------------------->
-
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex ">
-          <div class="text-gray-700 font-bold">Client Side</div>
-        </div>
-      </div>
-
+    <app-card>
+      <div title>Client Side</div>
       <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6 px-2">
         <div *ngFor="let skill of clientSideSkill">
           <app-elements-skill [name]="skill.name" [level]="skill.level"></app-elements-skill>
         </div>
       </div>
-
-    </div>
+    </app-card>
 
     <!------------------------------------------------------------------->
     <!----------------------- section Server Side ----------------------->
     <!------------------------------------------------------------------->
 
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex ">
-          <div class="text-gray-700 font-bold">Server Side</div>
-        </div>
-      </div>
-
+    <app-card>
+      <div title>Server Side</div>
       <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6 px-2">
         <div *ngFor="let skill of serverSideSkill">
           <app-elements-skill [name]="skill.name" [level]="skill.level"></app-elements-skill>
         </div>
       </div>
-
-    </div>
+    </app-card>
 
     <!------------------------------------------------------------------->
     <!--------------- section Development & Operations ------------------>
     <!------------------------------------------------------------------->
 
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex ">
-          <div class="text-gray-700 font-bold">Development & Operations</div>
-        </div>
-      </div>
-
+    <app-card>
+      <div title>Development & Operations</div>
       <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6 px-2">
         <div *ngFor="let skill of developmentAndOperationsSkill">
           <app-elements-skill [name]="skill.name" [level]="skill.level"></app-elements-skill>
         </div>
       </div>
-
-    </div>
+    </app-card>
 
     <!------------------------------------------------------------------->
     <!----------------------- section Familiar With ---------------------->
     <!------------------------------------------------------------------->
 
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex ">
-          <div class="text-gray-700 font-bold">Familiar With</div>
-        </div>
-      </div>
-
+    <app-card>
+      <div title>Familiar With</div>
       <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6 px-2">
         <div *ngFor="let skill of familiarSkills">
           <div class="text-gray-500 text-sm">{{ skill.name }}</div>
         </div>
       </div>
+    </app-card>
 
-    </div>
 
     <!------------------------------------------------------------------->
     <!----------------------- section Education ------------------------->
     <!------------------------------------------------------------------->
 
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex ">
-          <div class="text-gray-700 font-bold">Education</div>
-        </div>
-      </div>
-
+    <app-card>
+      <div title>Education</div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2">
         <div class="flex flex-col gap-2">
           <div class="font-bold text-gray-500">Associate in Computer</div>
@@ -260,22 +203,15 @@
 
         </div>
       </div>
+    </app-card>
 
-    </div>
 
     <!------------------------------------------------------------------->
     <!----------------------- section Experience ------------------------>
     <!------------------------------------------------------------------->
 
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex ">
-          <div class="text-gray-700 font-bold">Experience</div>
-        </div>
-      </div>
-
+    <app-card>
+      <div title>Experience</div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2">
 
         <div class="flex flex-col gap-2">
@@ -345,24 +281,15 @@
 
 
       </div>
-
-    </div>
+    </app-card>
 
 
     <!------------------------------------------------------------------->
     <!----------------------- section certification --------------------->
     <!------------------------------------------------------------------->
 
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex ">
-          <div class="text-gray-700 font-bold">Certification</div>
-        </div>
-      </div>
-
-
+    <app-card>
+      <div title>Certification</div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 mt-2 px-2">
 
         <div class="flex flex-col gap-2">
@@ -400,24 +327,14 @@
         </div>
 
       </div>
-
-
-    </div>
+    </app-card>
 
     <!------------------------------------------------------------------->
     <!----------------------- section languages ------------------------->
     <!------------------------------------------------------------------->
 
-    <div
-      class="relative bg-white rounded-lg border border-gray-200 shadow-md p-4 pb-6">
-
-      <div class="flex flex-col gap-2">
-        <div class="flex ">
-          <div class="text-gray-700 font-bold">Languages</div>
-        </div>
-      </div>
-
-
+    <app-card>
+      <div title>Languages</div>
       <div class="flex flex-col gap-2">
 
         <div class="flex flex-col gap-2 px-2 mt-4">
@@ -441,9 +358,8 @@
         </div>
 
       </div>
+    </app-card>
 
-
-    </div>
 
     <div class="text-center">
       <a class="text-gray-400 text-sm" target="_blank" href="https://github.com/fadakar/fadakar.id.ir">

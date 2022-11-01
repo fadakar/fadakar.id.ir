@@ -7,6 +7,7 @@ import {ResumeComponent} from "./resume.component";
 import {SkillComponent} from "./elements/skill/skill.component";
 import {SkillProgressComponent} from './elements/skill/skill.progress.component';
 import {Theme2Module} from '../theme2/theme2.module';
+import {CardComponent} from './elements/card.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {Theme2Module} from '../theme2/theme2.module';
     HomeIndexComponent,
     SkillComponent,
     SkillProgressComponent,
+    CardComponent,
   ],
     imports: [
         ResumeRoutingModule,
