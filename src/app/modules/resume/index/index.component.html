@@ -1,14 +1,14 @@
-<div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-4" style="font-family: 'Open Sans'">
+<div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 print:grid-cols-1" style="font-family: 'Open Sans'">
   <div class="col-span-1">
 
     <!------------------------------------------------------------------->
     <!------------------------- section profile ------------------------->
     <!------------------------------------------------------------------->
 
-    <div class="flex flex-col gap-4 lg:sticky lg:top-5">
+    <div class="flex flex-col print:flex-row gap-4 lg:sticky lg:top-5 ">
 
       <div
-        class=" bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden">
+        class="print:w-full print:min-h-[180px]  bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden">
         <img class="print:hidden rounded-t-lg w-full select-none" draggable="false" src="/assets/img/1.jpg"
              alt="programmer"/>
 
@@ -38,7 +38,7 @@
       <!----------------------- section Information ----------------------->
       <!------------------------------------------------------------------->
 
-      <app-card>
+      <app-card class="print:w-full">
         <div title>Information</div>
 
         <div class="flex flex-col gap-2">
@@ -56,6 +56,21 @@
             <div class="text-gray-400">Birthday</div>
             <div class="text-gray-700">1994</div>
           </div>
+
+          <div class="hidden print:flex justify-between ">
+            <div class="text-gray-400"></div>
+            <div class="text-gray-700"><br></div>
+          </div>
+
+          <div class="hidden print:flex justify-between ">
+            <div class="text-gray-400"></div>
+            <div class="text-gray-700"><br></div>
+          </div>
+
+          <div class="hidden print:flex justify-between ">
+            <div class="text-gray-400"></div>
+            <div class="text-gray-700"><br></div>
+          </div>
         </div>
 
 
@@ -65,7 +80,7 @@
       <!------------------------------------------------------------------->
       <!----------------------- section Contact Me ------------------------>
       <!------------------------------------------------------------------->
-      <app-card>
+      <app-card class="print:w-full">
         <div title>Contact Me</div>
 
         <div class="flex flex-col gap-2">
@@ -96,6 +111,11 @@
             <div class="text-gray-400">Linkedin</div>
             <a class="text-gray-700" target="_blank" href="https://ir.linkedin.com/in/gholamreza-fadakar-759300b1">Visit
               Linkedin</a>
+          </div>
+
+          <div class="hidden print:flex justify-between ">
+            <div class="text-gray-400"></div>
+            <div class="text-gray-700"><br></div>
           </div>
         </div>
 
@@ -180,7 +200,7 @@
     <!----------------------- section Education ------------------------->
     <!------------------------------------------------------------------->
 
-    <app-card>
+    <app-card class="print:mt-16">
       <div title>Education</div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2">
         <div class="flex flex-col gap-2">
@@ -216,7 +236,7 @@
     <!----------------------- section Experience ------------------------>
     <!------------------------------------------------------------------->
 
-    <app-card class="print:mt-16">
+    <app-card >
       <div title>Experience</div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2">
 
