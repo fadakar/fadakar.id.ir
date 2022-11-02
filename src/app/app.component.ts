@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {filter} from 'rxjs';
+import {NavigationEnd, Router} from '@angular/router';
+
+
+declare let gtag: Function;
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private router: Router) {
+  }
+
+  ngOnInit() {
+    this.setUpAnalytics();
+  }
+
+  setUpAnalytics() {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd)
+      )
+      .subscribe((event: any) => {
+        gtag('config', 'G-8V4FTZG54C',
+          {
+            page_path: event.urlAfterRedirects
+          }
+        );
+      });
+  }
+
 }
