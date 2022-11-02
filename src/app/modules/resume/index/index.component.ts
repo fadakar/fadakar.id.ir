@@ -16,12 +16,14 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Html', Level.expert),
     new Skill('CSS', Level.expert),
     new Skill('Javascript', Level.expert),
+    new Skill('Jquery', Level.expert),
     new Skill('Typescript', Level.expert),
     new Skill('Angular', Level.expert),
     new Skill('Rxjs', Level.expert),
     new Skill('Vuejs/Vuex', Level.advance),
     new Skill('Tailwindcss', Level.expert),
     new Skill('Bootstrap', Level.expert),
+    new Skill('Material UI', Level.expert),
 
   ];
 
