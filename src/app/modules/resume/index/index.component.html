@@ -19,8 +19,8 @@
         </div>
 
         <div class="p-5 pt-12 flex flex-col gap-2 px-8">
-          <h5 class=" text-xl tracking-tight text-gray-800 dark:text-white">Gholamreza Fadakar</h5>
-          <p class="pl-1 text-md text-gray-500 dark:text-gray-400">Full Stack Senior Developer</p>
+          <h5 class=" text-xl tracking-tight text-gray-800 ">Gholamreza Fadakar</h5>
+          <p class="pl-1 text-md text-gray-700">Full Stack Developer</p>
         </div>
         <div class="flex flex-col px-8 pt-2 pb-5 print:hidden">
           <a
@@ -43,32 +43,32 @@
 
         <div class="flex flex-col gap-2">
           <div class="flex justify-between">
-            <div class="text-gray-400">Location</div>
+            <div class="text-gray-500">Location</div>
             <div class="text-gray-700">Iran,Tehran</div>
           </div>
 
           <div class="flex justify-between">
-            <div class="text-gray-400">Experience</div>
+            <div class="text-gray-500">Experience</div>
             <div class="text-gray-700">+11 year</div>
           </div>
 
           <div class="flex justify-between">
-            <div class="text-gray-400">Birthday</div>
+            <div class="text-gray-500">Birthday</div>
             <div class="text-gray-700">1994</div>
           </div>
 
           <div class="hidden print:flex justify-between ">
-            <div class="text-gray-400"></div>
+            <div class="text-gray-500"></div>
             <div class="text-gray-700"><br></div>
           </div>
 
           <div class="hidden print:flex justify-between ">
-            <div class="text-gray-400"></div>
+            <div class="text-gray-500"></div>
             <div class="text-gray-700"><br></div>
           </div>
 
           <div class="hidden print:flex justify-between ">
-            <div class="text-gray-400"></div>
+            <div class="text-gray-500"></div>
             <div class="text-gray-700"><br></div>
           </div>
         </div>
@@ -86,35 +86,35 @@
         <div class="flex flex-col gap-2">
 
           <div class="flex justify-between">
-            <div class="text-gray-400">Phone</div>
+            <div class="text-gray-500">Phone</div>
             <a class="text-gray-700" target="_blank"
                href="tel:+989190074754">+989190074754</a>
           </div>
 
           <div class="flex justify-between">
-            <div class="text-gray-400">Email</div>
+            <div class="text-gray-500">Email</div>
             <a class="text-gray-700" target="_blank"
                href="mailto:fadakargholamreza@gmail.com">fadakargholamreza@gmail.com</a>
           </div>
 
           <div class="flex justify-between">
-            <div class="text-gray-400">Personal Website</div>
+            <div class="text-gray-500">Personal Website</div>
             <a class="text-gray-700" target="_blank" href="https://fdkr.ir">https://fdkr.ir</a>
           </div>
 
           <div class="flex justify-between">
-            <div class="text-gray-400">Github</div>
+            <div class="text-gray-500">Github</div>
             <a class="text-gray-700" target="_blank" href="https://www.github.com/fadakar">Visit Github</a>
           </div>
 
           <div class="flex justify-between">
-            <div class="text-gray-400">Linkedin</div>
+            <div class="text-gray-500">Linkedin</div>
             <a class="text-gray-700" target="_blank" href="https://ir.linkedin.com/in/gholamreza-fadakar-759300b1">Visit
               Linkedin</a>
           </div>
 
           <div class="hidden print:flex justify-between ">
-            <div class="text-gray-400"></div>
+            <div class="text-gray-500"></div>
             <div class="text-gray-700"><br></div>
           </div>
         </div>
@@ -132,7 +132,7 @@
     <!------------------------------------------------------------------->
     <app-card>
       <div title>Summary</div>
-      <p class="text-gray-500 text-sm leading-7 px-2">
+      <p class="text-gray-500 text-sm print:text-lg leading-7 px-2">
         Passionate full-stack engineer with 11+ years of hands-on experience in developing scalable
         websites/applications using a wide range of front-end and back-end skills like HTML, CSS, Javascript, PHP,
         MySQL, laravel framework, angular framework, etc.
@@ -186,11 +186,11 @@
     <!----------------------- section Familiar With ---------------------->
     <!------------------------------------------------------------------->
 
-    <app-card>
+    <app-card class="print:mt-[300px]">
       <div title>Familiar With</div>
       <div class="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-6 px-2">
         <div *ngFor="let skill of familiarSkills">
-          <div class="text-gray-500 text-sm">{{ skill.name }}</div>
+          <div class="text-gray-500 text-sm print:text-lg">{{ skill.name }}</div>
         </div>
       </div>
     </app-card>
@@ -200,9 +200,9 @@
     <!----------------------- section Education ------------------------->
     <!------------------------------------------------------------------->
 
-    <app-card class="print:mt-16">
+    <app-card >
       <div title>Education</div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2 print:text-lg">
         <div class="flex flex-col gap-2">
           <div class="font-bold text-gray-500">Associate in Computer</div>
           <div class="ml-10">
@@ -238,7 +238,7 @@
 
     <app-card >
       <div title>Experience</div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2 print:text-lg">
 
         <div class="flex flex-col gap-2">
           <div class="font-bold text-gray-500">Full Stack PHP Developer</div>
@@ -316,7 +316,7 @@
 
     <app-card>
       <div title>Certification</div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2  print:text-lg">
 
         <div class="flex flex-col gap-2">
           <div class="font-bold text-gray-500">Linux Fundamentals And Basic Administration</div>
@@ -359,11 +359,11 @@
     <!----------------------- section languages ------------------------->
     <!------------------------------------------------------------------->
 
-    <app-card>
+    <app-card class="print:mt-[150px]">
       <div title>Languages</div>
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 print:text-lg">
 
-        <div class="flex flex-col gap-2 px-2 mt-4">
+        <div class="flex flex-col gap-2 px-2 mt-4 ">
           <div class="font-bold text-gray-500">Persian - Native</div>
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 px-2">
             <app-elements-skill [name]="'reading'" [level]="Level.expert"></app-elements-skill>
