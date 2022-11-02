@@ -34,6 +34,7 @@ export class HomeIndexComponent implements OnInit {
     new Skill('SQL', Level.expert),
     new Skill('Mysql', Level.expert),
     new Skill('Rest/Restful', Level.expert),
+    new Skill('SOAP', Level.expert),
     new Skill('Nginx', Level.advance),
     new Skill('Apache', Level.advance),
     new Skill('Redis', Level.advance),
