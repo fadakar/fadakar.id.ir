@@ -39,7 +39,6 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Apache', Level.advance),
     new Skill('Redis', Level.advance),
     new Skill('RabbitMQ', Level.advance),
-    new Skill('Design Patterns', Level.expert),
     new Skill('ElasticSearch', Level.advance),
   ];
 
@@ -48,12 +47,17 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Linux OS', Level.advance),
     new Skill('Bash', Level.advance),
     new Skill('Git', Level.expert),
-    new Skill('Github/GitLab', Level.expert),
+    new Skill('SOLID', Level.expert),
+    new Skill('Design Patterns', Level.expert),
+    new Skill('Agile/Scrum/Kanban', Level.expert),
+
     new Skill('Docker', Level.expert),
     new Skill('Docker Swarm', Level.advance),
-    new Skill('Agile/Scrum/Kanban', Level.expert),
     new Skill('Kubernetes', Level.medium),
+
     new Skill('CI/CD', Level.medium),
+    new Skill('Github/GitLab', Level.expert),
+
     new Skill('Jenkins', Level.medium),
     new Skill('Ansible', Level.medium),
 
@@ -68,6 +72,7 @@ export class HomeIndexComponent implements OnInit {
   familiarSkills: Skill[] = [
     new Skill('C#', Level.expert),
     new Skill('C#/WindowsForm', Level.expert),
+    new Skill('NoSql/Mongodb', Level.expert),
     new Skill('JavaSE', Level.expert),
     new Skill('JavaEE', Level.expert),
 
