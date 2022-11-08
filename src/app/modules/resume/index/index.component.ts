@@ -37,8 +37,8 @@ export class HomeIndexComponent implements OnInit {
     new Skill('SOAP', Level.expert),
     new Skill('Nginx', Level.advance),
     new Skill('Apache', Level.advance),
-    new Skill('Redis', Level.advance),
-    new Skill('RabbitMQ', Level.advance),
+    new Skill('Redis', Level.medium),
+    new Skill('RabbitMQ', Level.medium),
     new Skill('ElasticSearch', Level.advance),
   ];
 
@@ -50,46 +50,37 @@ export class HomeIndexComponent implements OnInit {
     new Skill('SOLID', Level.expert),
     new Skill('Design Patterns', Level.expert),
     new Skill('Agile/Scrum/Kanban', Level.expert),
-
     new Skill('Docker', Level.expert),
     new Skill('Docker Swarm', Level.advance),
-    new Skill('Kubernetes', Level.medium),
 
     new Skill('CI/CD', Level.medium),
-    new Skill('Github/GitLab', Level.expert),
+    new Skill('GitLab/Github', Level.expert),
 
-    new Skill('Jenkins', Level.medium),
-    new Skill('Ansible', Level.medium),
 
     new Skill('Analysis & Design', Level.expert),
-    new Skill('Creativity', Level.expert),
-    new Skill('Team work', Level.expert),
     new Skill('Problem solving ability', Level.expert),
+    new Skill('Creativity and innovation', Level.expert),
+    new Skill('Team work', Level.expert),
 
   ];
 
 
   familiarSkills: Skill[] = [
-    new Skill('C#', Level.expert),
-    new Skill('C#/WindowsForm', Level.expert),
+    new Skill('Symfony Framework', Level.advance),
+    new Skill('CodeIgniter Framework', Level.medium),
+    new Skill('CakePhp Framework', Level.beginner),
+
     new Skill('NoSql/Mongodb', Level.expert),
-    new Skill('JavaSE', Level.expert),
-    new Skill('JavaEE', Level.expert),
 
-    new Skill('Symfony', Level.advance),
-    new Skill('Python', Level.advance),
+    new Skill('Jenkins', Level.medium),
+    new Skill('Ansible', Level.medium),
+    new Skill('Kubernetes', Level.medium),
 
-    new Skill('C++', Level.medium),
+
+
     new Skill('Node.js', Level.medium),
     new Skill('Express.js', Level.medium),
     new Skill('Nest.js', Level.medium),
-    new Skill('ASP.NET', Level.medium),
-    new Skill('CodeIgniter', Level.medium),
-    new Skill('Arduino', Level.medium),
-    new Skill('Spring', Level.medium),
-    new Skill('JPA', Level.medium),
-    new Skill('C#/Wpf', Level.medium),
-    new Skill('CakePhp', Level.beginner),
 
   ];
 
