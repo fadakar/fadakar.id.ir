@@ -56,6 +56,9 @@ export class HomeIndexComponent implements OnInit {
     new Skill('CI/CD', Level.medium),
     new Skill('GitLab/Github', Level.expert),
 
+    new Skill('Prometheus', Level.advance),
+    new Skill('Grafana', Level.advance),
+
 
     new Skill('Analysis & Design', Level.expert),
     new Skill('Problem solving ability', Level.expert),
