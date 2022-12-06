@@ -12,7 +12,7 @@ import {Level} from '../_models/level';
 export class HomeIndexComponent implements OnInit {
 
 
-  clientSideSkill: Skill[] =  [
+  clientSideSkill: Skill[] = [
     new Skill('Html', Level.expert),
     new Skill('CSS', Level.expert),
     new Skill('Javascript', Level.expert),
@@ -43,10 +43,12 @@ export class HomeIndexComponent implements OnInit {
   ];
 
 
-  developmentAndOperationsSkill: Skill[] =  [
+  developmentAndOperationsSkill: Skill[] = [
     new Skill('Linux OS', Level.advance),
     new Skill('Bash', Level.advance),
     new Skill('Git', Level.expert),
+    new Skill('Postman', Level.expert),
+    new Skill('Swagger', Level.medium),
     new Skill('SOLID', Level.expert),
     new Skill('Design Patterns', Level.expert),
     new Skill('Agile/Scrum/Kanban', Level.expert),
@@ -73,17 +75,16 @@ export class HomeIndexComponent implements OnInit {
     new Skill('CodeIgniter Framework', Level.medium),
     new Skill('CakePhp Framework', Level.beginner),
 
+    new Skill('TDD', Level.beginner),
     new Skill('NoSql/Mongodb', Level.expert),
 
+    new Skill('Kubernetes', Level.medium),
     new Skill('Jenkins', Level.medium),
     new Skill('Ansible', Level.medium),
-    new Skill('Kubernetes', Level.medium),
-
 
 
     new Skill('Node.js', Level.medium),
     new Skill('Express.js', Level.medium),
-    new Skill('Nest.js', Level.medium),
 
   ];
 
@@ -94,7 +95,7 @@ export class HomeIndexComponent implements OnInit {
   constructor() {
   }
 
-  get Level(): any{
+  get Level(): any {
     return Level;
   }
 
