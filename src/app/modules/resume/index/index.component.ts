@@ -16,15 +16,13 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Html', Level.expert),
     new Skill('CSS', Level.expert),
     new Skill('Javascript', Level.expert),
-    new Skill('Jquery', Level.expert),
     new Skill('Typescript', Level.expert),
     new Skill('Angular', Level.expert),
-    new Skill('Rxjs', Level.expert),
+    new Skill('ReactJs', Level.advance),
     new Skill('Vuejs/Vuex', Level.advance),
     new Skill('Tailwindcss', Level.expert),
     new Skill('Bootstrap', Level.expert),
     new Skill('Material UI', Level.expert),
-
   ];
 
 
@@ -66,7 +64,6 @@ export class HomeIndexComponent implements OnInit {
     new Skill('Problem solving ability', Level.expert),
     new Skill('Creativity and innovation', Level.expert),
     new Skill('Team work', Level.expert),
-
   ];
 
 
@@ -85,7 +82,6 @@ export class HomeIndexComponent implements OnInit {
 
     new Skill('Node.js', Level.medium),
     new Skill('Express.js', Level.medium),
-
   ];
 
 
