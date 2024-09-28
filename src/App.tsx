@@ -1,5 +1,5 @@
 import {HomePage} from './pages'
-import {Layout} from "./components/layout";
+import {Layout} from "./components";
 
 function App() {
     return (

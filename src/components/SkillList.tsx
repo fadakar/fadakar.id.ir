@@ -1,5 +1,5 @@
-import {Card, Skill as SkillComponent} from "./index.ts";
-import {SkillSection} from "../types.ts";
+import {Card, Skill as SkillComponent} from "./index";
+import {SkillSection} from "../types";
 
 const SkillList = ({title, skills}) => {
 

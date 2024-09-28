@@ -1,4 +1,4 @@
-import {ULListImage} from "../types.ts";
+import {ULListImage} from "../types";
 
 const ULList = ({title, items}) => {
 

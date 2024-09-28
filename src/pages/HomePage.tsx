@@ -1,8 +1,8 @@
-import {MainResume} from "../components";
+import {Resume} from "../components";
 
 const HomePage = () => {
     return (
-        <MainResume/>
+        <Resume/>
     )
 }
 

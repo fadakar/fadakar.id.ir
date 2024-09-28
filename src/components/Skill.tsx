@@ -1,6 +1,6 @@
-import {SkillProgress} from "./index.ts";
+import {SkillProgress} from "./index";
 
-const Skill = ({name, level , hasSection = false}) => {
+const Skill = ({name, level, hasSection = false}) => {
 
     const classList = [
         'flex',

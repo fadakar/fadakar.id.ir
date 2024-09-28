@@ -1,4 +1,3 @@
-
 export enum Level {
     beginner = 1,
     medium = 2,

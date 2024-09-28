@@ -1,5 +1,5 @@
 import {useMemo} from "react";
-import {Level} from "../types.ts";
+import {Level} from "../types";
 
 const SkillProgress = ({level}) => {
 

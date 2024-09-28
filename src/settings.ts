@@ -2,9 +2,13 @@ import {calculateYearsFromNow} from "./utils/datetime.ts";
 import {Level, Skill, SkillSection, UlList, ULListImage} from "./types.ts";
 
 
-
+export const GOOGLE_TAG_ID = 'G-8V4FTZG54C';
 export const INFORMATION = {
+    profileImage: '/assets/img/profile.jpeg',
+    profileBackgroundImage: '/assets/img/1.jpg',
     name: 'Gholamreza Fadakar',
+    nameFa: 'غلامرضا فداکار',
+    PDFFile: '/assets/pdf/gholamreza-fadakar-resume.pdf',
     position: 'Full-Stack Software Engineer',
     location: 'Iran, Tehran',
     experienceTime: calculateYearsFromNow('2013-01-01'),

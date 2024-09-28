@@ -1,8 +1,8 @@
 export * from './layout';
-export * from './resume';
 
-export {default as Card} from './Card.tsx'
-export {default as Skill} from './Skill.tsx'
-export {default as SkillProgress} from './SkillProgress.tsx'
-export {default as SkillList} from './SkillList.tsx'
-export {default as ULList} from './UlList.tsx'
+export {default as Card} from './Card'
+export {default as Skill} from './Skill'
+export {default as SkillProgress} from './SkillProgress'
+export {default as SkillList} from './SkillList'
+export {default as ULList} from './UlList'
+export {default as Resume} from './Resume'
