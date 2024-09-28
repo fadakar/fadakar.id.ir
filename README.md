@@ -13,9 +13,8 @@
     
     $ npm run dev
 ```
-
+Now Available on [localhost:5174](http://localhost:5174)
 #### For edit goto:
 
-```
-    src/settings.ts
-```
+Edit File [src/settings.ts](src/settings.ts)
+
