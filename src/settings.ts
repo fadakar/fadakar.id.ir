@@ -2,7 +2,7 @@ import {calculateYearsToNow} from "./utils/datetime";
 import {Level, Skill, SkillSection, UlList, ULListImage} from "./types";
 
 
-export const GOOGLE_TAG_ID = 'G-8V4FTZG54C';
+export const GOOGLE_TAG_ID: string | undefined = 'G-8V4FTZG54C';
 export const INFORMATION = {
   profileImage: '/assets/img/profile.jpeg',
   profileBackgroundImage: '/assets/img/1.jpg',
