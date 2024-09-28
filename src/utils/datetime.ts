@@ -1,4 +1,4 @@
-export function calculateYearsFromNow(date: string): string {
+export function calculateYearsToNow(date: string): string {
     const dateInMs: number = new Date(date).getTime();
     const nowInMs: number = Date.now();
     const differenceInMs: number = nowInMs - dateInMs;
