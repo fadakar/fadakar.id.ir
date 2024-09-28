@@ -7,14 +7,15 @@ import App from './App.tsx'
 import './index.css'
 
 
-const tagManagerArgs = {
+if (GOOGLE_TAG_ID) {
+  TagManager.initialize({
     gtmId: GOOGLE_TAG_ID,
+  });
 }
-TagManager.initialize(tagManagerArgs)
 
 
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <App/>
-    </StrictMode>,
+  <StrictMode>
+    <App/>
+  </StrictMode>,
 )
