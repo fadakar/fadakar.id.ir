@@ -11,7 +11,7 @@
     
     $ npm run dev
 ```
-Now Available on [localhost:5174](http://localhost:5174)
+Now Available on [localhost:5173](http://localhost:5173)
 ##### Edit:
 
 Edit File [src/settings.ts](src/settings.ts)
