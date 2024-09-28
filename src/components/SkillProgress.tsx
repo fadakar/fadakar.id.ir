@@ -1,17 +1,23 @@
+import {FC} from "react";
 import {useMemo} from "react";
-import {Level} from "../types";
+import {SkillLevel} from "../types";
 
-const SkillProgress = ({level}) => {
+
+interface Props {
+    level: SkillLevel,
+}
+
+const SkillProgress: FC<Props> = ({level}) => {
 
     const width = useMemo(() => {
         switch (level) {
-            case Level.beginner:
+            case SkillLevel.beginner:
                 return '25%';
-            case Level.medium:
+            case SkillLevel.medium:
                 return '50%';
-            case Level.advance:
+            case SkillLevel.advance:
                 return '75%';
-            case Level.expert:
+            case SkillLevel.expert:
                 return '100%';
         }
     }, [level])

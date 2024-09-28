@@ -1,9 +1,9 @@
 import {Resume} from "../components";
 
 const HomePage = () => {
-    return (
-        <Resume/>
-    )
+  return (
+    <Resume/>
+  )
 }
 
 export default HomePage;

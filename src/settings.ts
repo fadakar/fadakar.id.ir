@@ -1,5 +1,5 @@
 import {calculateYearsToNow} from "./utils/datetime";
-import {Level, Skill, SkillSection, UlList, ULListImage} from "./types";
+import {SkillLevel, Skill, SkillSection, UlList, ULListImage} from "./types";
 
 
 export const GOOGLE_TAG_ID: string | undefined = 'G-8V4FTZG54C';
@@ -28,90 +28,90 @@ I am interested in knowledge sharing, exercising, and game playing.
 
 
 export const CLIENT_SIDE_SKILLS: Skill[] = [
-  new Skill('Html', Level.expert),
-  new Skill('CSS', Level.expert),
-  new Skill('Javascript', Level.expert),
-  new Skill('Typescript', Level.expert),
-  new Skill('Angular', Level.expert),
-  new Skill('ReactJs', Level.advance),
-  new Skill('Vuejs/Vuex', Level.advance),
-  new Skill('Tailwindcss', Level.expert),
-  new Skill('Bootstrap', Level.expert),
-  new Skill('Material UI', Level.expert),
+  new Skill('Html', SkillLevel.expert),
+  new Skill('CSS', SkillLevel.expert),
+  new Skill('Javascript', SkillLevel.expert),
+  new Skill('Typescript', SkillLevel.expert),
+  new Skill('Angular', SkillLevel.expert),
+  new Skill('ReactJs', SkillLevel.advance),
+  new Skill('Vuejs/Vuex', SkillLevel.advance),
+  new Skill('Tailwindcss', SkillLevel.expert),
+  new Skill('Bootstrap', SkillLevel.expert),
+  new Skill('Material UI', SkillLevel.expert),
 ];
 
 
 export const SERVER_SIDE_SKILLS: Skill[] = [
-  new Skill('PHP', Level.expert),
-  new Skill('Laravel', Level.expert),
-  new Skill('SQL', Level.expert),
-  new Skill('Mysql', Level.expert),
-  new Skill('Rest/Restful', Level.expert),
-  new Skill('SOAP', Level.expert),
-  new Skill('Nginx', Level.advance),
-  new Skill('Apache', Level.advance),
-  new Skill('Redis', Level.medium),
-  new Skill('RabbitMQ', Level.medium),
-  new Skill('ElasticSearch', Level.advance),
+  new Skill('PHP', SkillLevel.expert),
+  new Skill('Laravel', SkillLevel.expert),
+  new Skill('SQL', SkillLevel.expert),
+  new Skill('Mysql', SkillLevel.expert),
+  new Skill('Rest/Restful', SkillLevel.expert),
+  new Skill('SOAP', SkillLevel.expert),
+  new Skill('Nginx', SkillLevel.advance),
+  new Skill('Apache', SkillLevel.advance),
+  new Skill('Redis', SkillLevel.medium),
+  new Skill('RabbitMQ', SkillLevel.medium),
+  new Skill('ElasticSearch', SkillLevel.advance),
 ];
 
 
 export const DEVOPS_SKILLS: Skill[] = [
-  new Skill('Linux OS', Level.advance),
-  new Skill('Bash', Level.advance),
-  new Skill('Git', Level.expert),
-  new Skill('Postman', Level.expert),
-  new Skill('Swagger', Level.medium),
-  new Skill('SOLID', Level.expert),
-  new Skill('Design Patterns', Level.expert),
-  new Skill('Agile/Scrum/Kanban', Level.expert),
-  new Skill('Docker', Level.expert),
-  new Skill('Docker Swarm', Level.advance),
+  new Skill('Linux OS', SkillLevel.advance),
+  new Skill('Bash', SkillLevel.advance),
+  new Skill('Git', SkillLevel.expert),
+  new Skill('Postman', SkillLevel.expert),
+  new Skill('Swagger', SkillLevel.medium),
+  new Skill('SOLID', SkillLevel.expert),
+  new Skill('Design Patterns', SkillLevel.expert),
+  new Skill('Agile/Scrum/Kanban', SkillLevel.expert),
+  new Skill('Docker', SkillLevel.expert),
+  new Skill('Docker Swarm', SkillLevel.advance),
 
-  new Skill('CI/CD', Level.medium),
-  new Skill('GitLab/Github', Level.expert),
+  new Skill('CI/CD', SkillLevel.medium),
+  new Skill('GitLab/Github', SkillLevel.expert),
 
-  new Skill('Prometheus', Level.advance),
-  new Skill('Grafana', Level.advance),
+  new Skill('Prometheus', SkillLevel.advance),
+  new Skill('Grafana', SkillLevel.advance),
 
 
-  new Skill('Analysis & Design', Level.expert),
-  new Skill('Problem solving ability', Level.expert),
-  new Skill('Creativity and innovation', Level.expert),
-  new Skill('Team work', Level.expert),
+  new Skill('Analysis & Design', SkillLevel.expert),
+  new Skill('Problem solving ability', SkillLevel.expert),
+  new Skill('Creativity and innovation', SkillLevel.expert),
+  new Skill('Team work', SkillLevel.expert),
 ];
 
 
 export const FAMILIAR_SKILLS: Skill[] = [
-  new Skill('Symfony Framework', Level.advance),
-  new Skill('CodeIgniter Framework', Level.medium),
-  new Skill('CakePhp Framework', Level.beginner),
+  new Skill('Symfony Framework', SkillLevel.advance),
+  new Skill('CodeIgniter Framework', SkillLevel.medium),
+  new Skill('CakePhp Framework', SkillLevel.beginner),
 
-  new Skill('TDD', Level.beginner),
-  new Skill('NoSql/Mongodb', Level.expert),
+  new Skill('TDD', SkillLevel.beginner),
+  new Skill('NoSql/Mongodb', SkillLevel.expert),
 
-  new Skill('Kubernetes', Level.medium),
-  new Skill('Jenkins', Level.medium),
-  new Skill('Ansible', Level.medium),
+  new Skill('Kubernetes', SkillLevel.medium),
+  new Skill('Jenkins', SkillLevel.medium),
+  new Skill('Ansible', SkillLevel.medium),
 
 
-  new Skill('Node.js', Level.medium),
-  new Skill('Express.js', Level.medium),
+  new Skill('Node.js', SkillLevel.medium),
+  new Skill('Express.js', SkillLevel.medium),
 ];
 
 
 export const LANGUAGE_SKILLS: SkillSection[] = [
   new SkillSection('Persian - Native', [
-    new Skill('Reading', Level.expert),
-    new Skill('Writing', Level.expert),
-    new Skill('Speaking', Level.expert),
-    new Skill('Listening', Level.expert),
+    new Skill('Reading', SkillLevel.expert),
+    new Skill('Writing', SkillLevel.expert),
+    new Skill('Speaking', SkillLevel.expert),
+    new Skill('Listening', SkillLevel.expert),
   ]),
   new SkillSection('English', [
-    new Skill('Reading', Level.advance),
-    new Skill('Writing', Level.advance),
-    new Skill('Speaking', Level.advance),
-    new Skill('Listening', Level.advance),
+    new Skill('Reading', SkillLevel.advance),
+    new Skill('Writing', SkillLevel.advance),
+    new Skill('Speaking', SkillLevel.advance),
+    new Skill('Listening', SkillLevel.advance),
   ]),
 ];
 
