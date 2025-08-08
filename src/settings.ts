@@ -4,7 +4,7 @@ import {SkillLevel, Skill, SkillSection, UlList, ULListImage} from "./types";
 
 export const GOOGLE_TAG_ID: string | undefined = 'G-8V4FTZG54C';
 export const INFORMATION = {
-  profileImage: '/assets/img/profile.jpeg',
+  profileImage: '/assets/img/profile.png',
   profileBackgroundImage: '/assets/img/profile-bg.webp',
   name: 'Gholamreza Fadakar',
   nameFa: 'غلامرضا فداکار',

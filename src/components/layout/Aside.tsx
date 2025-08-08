@@ -13,7 +13,7 @@ const Aside = () => {
 
         <div className="relative w-[7rem]">
           <img
-            className="absolute top-[-70px] left-[35px] print:static print:ml-7 print:mt-7  rounded-xl ring-2 ring-white outline-2 outline-gray-400"
+            className="absolute h-[7rem] top-[-70px] left-[35px] print:static print:ml-7 print:mt-7  rounded-xl ring-2 ring-gray-200 outline-2 outline-gray-400"
             draggable="false" src={INFORMATION.profileImage}
             alt={`${INFORMATION.nameFa} ${INFORMATION.name}`}/>
         </div>
