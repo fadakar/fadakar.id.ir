@@ -3,7 +3,7 @@
 
 
 #### dependencies:
-+ Node 18.*
++ Node 20.*
 
 #### Run:
 ```bash
