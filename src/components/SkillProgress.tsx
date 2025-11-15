@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {JSX} from "react";
 import {useMemo} from "react";
 import {SkillLevel} from "../types";
 
@@ -7,7 +7,7 @@ interface Props {
     level: SkillLevel,
 }
 
-const SkillProgress: FC<Props> = ({level}) => {
+const SkillProgress: ({level}: Props) => JSX.Element = ({level}) => {
 
     const width = useMemo(() => {
         switch (level) {

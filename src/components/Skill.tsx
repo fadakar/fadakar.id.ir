@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {JSX} from "react";
 import {SkillProgress} from "./index";
 import {SkillLevel} from "../types.ts";
 
@@ -8,7 +8,7 @@ interface Props {
   level: SkillLevel,
 }
 
-const Skill: FC<Props> = ({name, level}) => {
+const Skill: ({name, level}: Props) => JSX.Element = ({name, level}) => {
 
   const classList = [
     'flex',

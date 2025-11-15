@@ -37,7 +37,7 @@ const Resume = () => {
       </Card>
 
       <Card title={'Experience'}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2 px-2 print:text-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 mt-2 px-2 print:text-lg">
           {EXPERIENCE.map((ulList, i) => {
             return (
               <ULList key={i} title={ulList.title} items={ulList.items}/>

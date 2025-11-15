@@ -5,7 +5,6 @@ export enum SkillLevel {
   expert = 4,
 }
 
-
 export class Skill {
   constructor(
     public name: string,
@@ -13,7 +12,6 @@ export class Skill {
   ) {
   }
 }
-
 
 export class SkillSection {
   constructor(
@@ -31,7 +29,7 @@ export class ULListImage {
   }
 }
 
-export type ULItem = string | ULListImage;
+export type ULItem = string | ULListImage | UlList;
 
 export class UlList {
   constructor(

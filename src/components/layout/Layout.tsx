@@ -1,4 +1,4 @@
-import {FC, ReactNode} from "react";
+import {JSX, ReactNode} from "react";
 import {Footer} from "./index";
 import {Header} from "./index";
 
@@ -9,7 +9,7 @@ interface Props {
   children?: ReactNode,
 }
 
-const Layout: FC<Props> = ({children}) => {
+const Layout: ({children}: Props) => JSX.Element = ({children}) => {
   return (
     <div className="bg-gray-100 print:bg-transparent min-h-screen pt-2 lg:pt-5">
       <Header/>

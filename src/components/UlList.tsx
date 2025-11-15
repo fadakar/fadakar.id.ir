@@ -1,14 +1,12 @@
-import {FC} from "react";
-import {ULItem, ULListImage} from "../types";
-
+import {JSX} from "react";
+import {ULItem, UlList, ULListImage} from "../types";
 
 interface Props {
   title: string,
   items: ULItem[],
 }
 
-const ULList: FC<Props> = ({title, items}) => {
-
+const ULList: ({title, items}: Props) => JSX.Element = ({title, items}) => {
 
   const renderText = (item: any) => {
     if (item instanceof ULListImage) {
@@ -16,6 +14,10 @@ const ULList: FC<Props> = ({title, items}) => {
         <a target="_blank" href={item.src}>
           <img src={item.src} alt={item.alt}/>
         </a>
+      )
+    } else if (item instanceof UlList) {
+      return (
+        <ULList title={item.title} items={item.items}/>
       )
     }
 

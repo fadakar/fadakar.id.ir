@@ -1,4 +1,4 @@
-import {FC, ReactNode} from "react";
+import {JSX, ReactNode} from "react";
 
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   title: string,
 }
 
-const Card: FC<Props> = ({children, title}) => {
+const Card: ({children, title}: Props) => JSX.Element = ({children, title}) => {
   return (
     <div
       className="relative bg-white rounded-lg ring-[1.5px] ring-gray-300 shadow-md overflow-hidden">

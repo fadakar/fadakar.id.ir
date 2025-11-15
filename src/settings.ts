@@ -118,14 +118,14 @@ export const LANGUAGE_SKILLS: SkillSection[] = [
 
 export const EDUCATIONS: UlList[] = [
   new UlList('Associate in Computer', [
-    'Branch: Software',
+    'Branch: Software Engineer',
     'University: Enghelab-e Eslami Technical College',
     'Location: Tehran, Iran',
     'Graduated: 2015',
     'GPA: 17/20',
   ]),
   new UlList('Diploma in Computer', [
-    'Branch: Software',
+    'Branch: Software Engineer',
     'School: Shahid Ghasemi Conservatory',
     'Location: Tehran, Iran',
     'Graduated: 2012',
@@ -140,6 +140,18 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: DEC 2022 - Now',
     'Technologies: PHP, Laravel, Nginx, Mysql, Typescript, ReactJS, WebSocket, Tailwind',
+    new UlList('Achievements:',[
+      'Implementation and maintenance of the web APP of Soroush Plus messenger',
+      'Implementation and maintenance of the vitrin APP for Soroush Plus messenger',
+      'Implementation and maintenance of the messenger management panel and internal modules',
+      'Implementation and maintenance of the link scanner service for Soroush Plus messenger',
+      'Implementation and maintenance of the map APP for Soroush Plus',
+      'Implementation and maintenance of the accounts panel for Soroush Plus messenger',
+      'Implementation and maintenance of the backend for Gangsters game',
+      'Implementation and maintenance of the react Native version of Soroush Plus messenger based on the web APP',
+      'Implementation and maintenance of the intermediate gateway panel for sending messages in messengers',
+      'Implementation and maintenance of the Soroush Plus website and management panel',
+    ])
   ]),
   new UlList('Full Stack PHP Developer', [
     'Company: Hamyar Sanat Co',
@@ -147,6 +159,11 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2020 - May 2022',
     'Technologies: PHP, Laravel, Nginx, Mysql, Elasticsearch, Typescript, Angular, Tailwind',
+    new UlList('Achievements:',[
+      'Implementation and maintenance of the customer relationship management ( CRM ) including backend with Laravel and front with Angular',
+      'Implementation and maintenance of the accounting management system including backend with Laravel and front with Angular',
+      'Implementation and maintenance of the treasury management system including backend with Laravel and front with Angular',
+    ])
   ]),
   new UlList('Full Stack PHP Developer', [
     'Company: Efadd Co',
@@ -154,6 +171,16 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2017 - 2020',
     'Technologies: PHP, Laravel, Nginx, Mysql ,Rabbitmq',
+    new UlList('Achievements:',[
+      'Implementation and maintenance of the customer relationship management system ( CRM )',
+      'Implementation and maintenance of the shipment management system by distribution agencies in the provinces',
+      'Implementation and maintenance of the accounting system for parcel shipment and distribution representatives',
+      'Implementation and maintenance of the central and distributed warehouse system in the provinces',
+      'Implementation and maintenance of the parcel shipment system by Iran National Post',
+      'Implementation and maintenance of the accounting system for the intermediate system of Iran National Post',
+      'Implementation and maintenance of the internal treasury system of the holding',
+      'Implementation of the centralized accounting system of the holding',
+    ]),
   ]),
   new UlList('Full Stack PHP Developer', [
     'Company: Selak Pardaz Co',
@@ -161,6 +188,10 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: June 2017 - December 2017',
     'Technologies: PHP, Laravel, Nginx, Mysql, Bootstrap, jquery',
+    new UlList('Achievements:',[
+      'Implementation of the diet generation system rejim.ir',
+      'Implementation of the student management system by teachers and review and control of student performance',
+    ]),
   ]),
   new UlList('Full Stack PHP Developer', [
     'Freelancer',
@@ -168,6 +199,9 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2014 - 2017',
     'Technologies: PHP, Laravel, Nginx, Mysql, Bootstrap, jquery',
+    new UlList('Achievements:',[
+      'Implementation and maintenance of nearly 20 sites',
+    ]),
   ]),
   new UlList('Backend PHP Developer', [
     'Company: Nahal Nik Royesh CO',
@@ -175,6 +209,10 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2013 - 2014',
     'Technologies: PHP Pure, Apache, Mysql, Bootstrap, jquery',
+    new UlList('Achievements:',[
+      'Implementation of the backend for the artibition.net store',
+      'Implementation of the backend for the social Information Portal (PAD)',
+    ]),
   ]),
 ];
 
@@ -191,7 +229,7 @@ export const CERTIFICATIONS: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2022',
     'GPA : 100/100',
-    new ULListImage('/assets/cert/devops.png', 'غلامرضا فداکار دیواپس')
+    new ULListImage('/assets/cert/devops.png', 'غلامرضا فداکار دواپس')
   ]),
   new UlList('Linux Fundamentals And Basic Administration', [
     'Institutions: Sematec Co',

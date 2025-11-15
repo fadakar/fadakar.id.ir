@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {JSX} from "react";
 import {Card, Skill as SkillComponent} from "./index";
 import {Skill, SkillSection} from "../types";
 
@@ -8,7 +8,7 @@ interface Props {
   skills: Skill[] | SkillSection[],
 }
 
-const SkillList: FC<Props> = ({title, skills}) => {
+const SkillList: ({title, skills}: Props) => JSX.Element = ({title, skills}) => {
 
   const isSection = skills[0] instanceof SkillSection;
 
