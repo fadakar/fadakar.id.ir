@@ -42,16 +42,17 @@ export const CLIENT_SIDE_SKILLS: Skill[] = [
 
 
 export const SERVER_SIDE_SKILLS: Skill[] = [
+  new Skill('JAVA', SkillLevel.expert),
+  new Skill('Spring Boot', SkillLevel.advance),
+  new Skill('Oracle', SkillLevel.advance),
+  new Skill('SQL', SkillLevel.expert),
+  new Skill('Kafka', SkillLevel.advance),
+  new Skill('Redis', SkillLevel.medium),
+
   new Skill('PHP', SkillLevel.expert),
   new Skill('Laravel', SkillLevel.expert),
-  new Skill('SQL', SkillLevel.expert),
-  new Skill('Mysql', SkillLevel.expert),
-  new Skill('Rest/Restful', SkillLevel.expert),
-  new Skill('SOAP', SkillLevel.expert),
+  new Skill('MariaDB', SkillLevel.expert),
   new Skill('Nginx', SkillLevel.advance),
-  new Skill('Apache', SkillLevel.advance),
-  new Skill('Redis', SkillLevel.medium),
-  new Skill('RabbitMQ', SkillLevel.medium),
   new Skill('ElasticSearch', SkillLevel.advance),
 ];
 
@@ -136,10 +137,17 @@ export const EDUCATIONS: UlList[] = [
 export const EXPERIENCE: UlList[] = [
   new UlList('Full Stack Developer', [
     'Company: Mohaymen CO ( Soroush Plus Messenger )',
+    'Position: Senior Backend Developer',
+    'Location: Tehran, Iran',
+    'Date: Aug 2026 - Now',
+    'Technologies: Java, Spring Boot, Oracle, Kafka, Redis, CI/CD, Kubernetes, Ceph S3 Storage',
+  ]),
+  new UlList('Full Stack Developer', [
+    'Company: Mohaymen CO ( Soroush Plus Messenger )',
     'Position: Senior Full Stack Developer',
     'Location: Tehran, Iran',
-    'Date: DEC 2022 - Now',
-    'Technologies: PHP, Laravel, Nginx, Mysql, Typescript, ReactJS, WebSocket, Tailwind',
+    'Date: DEC 2022 - Aug 2026',
+    'Technologies: PHP, Laravel, Nginx, Mysql, CI/CD, Kubernetes, Typescript, ReactJS, WebSocket, Tailwind',
     new UlList('Achievements:',[
       'Implementation and maintenance of the web APP of Soroush Plus messenger',
       'Implementation and maintenance of the vitrin APP for Soroush Plus messenger',
