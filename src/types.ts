@@ -5,28 +5,32 @@ export enum SkillLevel {
   expert = 4,
 }
 
+export const SkillLevelLabel: Record<SkillLevel, string> = {
+  [SkillLevel.beginner]: 'Beginner',
+  [SkillLevel.medium]: 'Medium',
+  [SkillLevel.advance]: 'Advance',
+  [SkillLevel.expert]: 'Expert',
+};
+
 export class Skill {
   constructor(
     public name: string,
     public level: SkillLevel,
-  ) {
-  }
+  ) {}
 }
 
 export class SkillSection {
   constructor(
     public title: string,
     public skills: Skill[],
-  ) {
-  }
+  ) {}
 }
 
 export class ULListImage {
   constructor(
     public src: string,
     public alt: string,
-  ) {
-  }
+  ) {}
 }
 
 export type ULItem = string | ULListImage | UlList;
@@ -35,6 +39,5 @@ export class UlList {
   constructor(
     public title: string,
     public items: ULItem[],
-  ) {
-  }
+  ) {}
 }

@@ -1,6 +1,5 @@
-import {calculateYearsToNow} from "./utils/datetime";
-import {SkillLevel, Skill, SkillSection, UlList, ULListImage} from "./types";
-
+import { calculateYearsToNow } from './utils/datetime';
+import { SkillLevel, Skill, SkillSection, UlList, ULListImage } from './types';
 
 export const GOOGLE_TAG_ID: string | undefined = 'G-8V4FTZG54C';
 export const INFORMATION = {
@@ -26,7 +25,6 @@ I developed 30+ websites/applications from scratch in the areas of financial, ac
 I am interested in knowledge sharing, exercising, and game playing.
 `;
 
-
 export const CLIENT_SIDE_SKILLS: Skill[] = [
   new Skill('Html', SkillLevel.expert),
   new Skill('CSS', SkillLevel.expert),
@@ -39,7 +37,6 @@ export const CLIENT_SIDE_SKILLS: Skill[] = [
   new Skill('Bootstrap', SkillLevel.expert),
   new Skill('Material UI', SkillLevel.expert),
 ];
-
 
 export const SERVER_SIDE_SKILLS: Skill[] = [
   new Skill('JAVA', SkillLevel.expert),
@@ -55,7 +52,6 @@ export const SERVER_SIDE_SKILLS: Skill[] = [
   new Skill('Nginx', SkillLevel.advance),
   new Skill('ElasticSearch', SkillLevel.advance),
 ];
-
 
 export const DEVOPS_SKILLS: Skill[] = [
   new Skill('Linux OS', SkillLevel.advance),
@@ -75,13 +71,11 @@ export const DEVOPS_SKILLS: Skill[] = [
   new Skill('Prometheus', SkillLevel.advance),
   new Skill('Grafana', SkillLevel.advance),
 
-
   new Skill('Analysis & Design', SkillLevel.expert),
   new Skill('Problem solving ability', SkillLevel.expert),
   new Skill('Creativity and innovation', SkillLevel.expert),
   new Skill('Team work', SkillLevel.expert),
 ];
-
 
 export const FAMILIAR_SKILLS: Skill[] = [
   new Skill('Symfony Framework', SkillLevel.advance),
@@ -95,11 +89,9 @@ export const FAMILIAR_SKILLS: Skill[] = [
   new Skill('Jenkins', SkillLevel.medium),
   new Skill('Ansible', SkillLevel.medium),
 
-
   new Skill('Node.js', SkillLevel.medium),
   new Skill('Express.js', SkillLevel.medium),
 ];
-
 
 export const LANGUAGE_SKILLS: SkillSection[] = [
   new SkillSection('Persian - Native', [
@@ -115,7 +107,6 @@ export const LANGUAGE_SKILLS: SkillSection[] = [
     new Skill('Listening', SkillLevel.advance),
   ]),
 ];
-
 
 export const EDUCATIONS: UlList[] = [
   new UlList('Associate in Computer', [
@@ -135,20 +126,20 @@ export const EDUCATIONS: UlList[] = [
 ];
 
 export const EXPERIENCE: UlList[] = [
-  new UlList('Full Stack Developer', [
+  new UlList('Backend Developer', [
     'Company: Mohaymen CO ( Soroush Plus Messenger )',
     'Position: Senior Backend Developer',
     'Location: Tehran, Iran',
-    'Date: Aug 2026 - Now',
+    'Date: Aug 2025 - Now',
     'Technologies: Java, Spring Boot, Oracle, Kafka, Redis, CI/CD, Kubernetes, Ceph S3 Storage',
   ]),
   new UlList('Full Stack Developer', [
     'Company: Mohaymen CO ( Soroush Plus Messenger )',
     'Position: Senior Full Stack Developer',
     'Location: Tehran, Iran',
-    'Date: DEC 2022 - Aug 2026',
+    'Date: DEC 2022 - Aug 2025',
     'Technologies: PHP, Laravel, Nginx, Mysql, CI/CD, Kubernetes, Typescript, ReactJS, WebSocket, Tailwind',
-    new UlList('Achievements:',[
+    new UlList('Achievements:', [
       'Implementation and maintenance of the web APP of Soroush Plus messenger',
       'Implementation and maintenance of the vitrin APP for Soroush Plus messenger',
       'Implementation and maintenance of the messenger management panel and internal modules',
@@ -159,7 +150,7 @@ export const EXPERIENCE: UlList[] = [
       'Implementation and maintenance of the react Native version of Soroush Plus messenger based on the web APP',
       'Implementation and maintenance of the intermediate gateway panel for sending messages in messengers',
       'Implementation and maintenance of the Soroush Plus website and management panel',
-    ])
+    ]),
   ]),
   new UlList('Full Stack PHP Developer', [
     'Company: Hamyar Sanat Co',
@@ -167,11 +158,11 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2020 - May 2022',
     'Technologies: PHP, Laravel, Nginx, Mysql, Elasticsearch, Typescript, Angular, Tailwind',
-    new UlList('Achievements:',[
+    new UlList('Achievements:', [
       'Implementation and maintenance of the customer relationship management ( CRM ) including backend with Laravel and front with Angular',
       'Implementation and maintenance of the accounting management system including backend with Laravel and front with Angular',
       'Implementation and maintenance of the treasury management system including backend with Laravel and front with Angular',
-    ])
+    ]),
   ]),
   new UlList('Full Stack PHP Developer', [
     'Company: Efadd Co',
@@ -179,7 +170,7 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2017 - 2020',
     'Technologies: PHP, Laravel, Nginx, Mysql ,Rabbitmq',
-    new UlList('Achievements:',[
+    new UlList('Achievements:', [
       'Implementation and maintenance of the customer relationship management system ( CRM )',
       'Implementation and maintenance of the shipment management system by distribution agencies in the provinces',
       'Implementation and maintenance of the accounting system for parcel shipment and distribution representatives',
@@ -196,7 +187,7 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: June 2017 - December 2017',
     'Technologies: PHP, Laravel, Nginx, Mysql, Bootstrap, jquery',
-    new UlList('Achievements:',[
+    new UlList('Achievements:', [
       'Implementation of the diet generation system rejim.ir',
       'Implementation of the student management system by teachers and review and control of student performance',
     ]),
@@ -207,9 +198,7 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2014 - 2017',
     'Technologies: PHP, Laravel, Nginx, Mysql, Bootstrap, jquery',
-    new UlList('Achievements:',[
-      'Implementation and maintenance of nearly 20 sites',
-    ]),
+    new UlList('Achievements:', ['Implementation and maintenance of nearly 20 sites']),
   ]),
   new UlList('Backend PHP Developer', [
     'Company: Nahal Nik Royesh CO',
@@ -217,7 +206,7 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2013 - 2014',
     'Technologies: PHP Pure, Apache, Mysql, Bootstrap, jquery',
-    new UlList('Achievements:',[
+    new UlList('Achievements:', [
       'Implementation of the backend for the artibition.net store',
       'Implementation of the backend for the social Information Portal (PAD)',
     ]),
@@ -230,27 +219,27 @@ export const CERTIFICATIONS: UlList[] = [
     'Location: Tehran, Iran',
     'Date: 2023',
     'GPA: 95/100',
-    new ULListImage('/assets/cert/reactjs.jpg', 'غلامرضا فداکار ریکت')
+    new ULListImage('/assets/cert/reactjs.jpg', 'غلامرضا فداکار ریکت'),
   ]),
   new UlList('Development And Operations Administration Pack', [
     'Institutions: Sematec Co',
     'Location: Tehran, Iran',
     'Date: 2022',
     'GPA : 100/100',
-    new ULListImage('/assets/cert/devops.png', 'غلامرضا فداکار دواپس')
+    new ULListImage('/assets/cert/devops.png', 'غلامرضا فداکار دواپس'),
   ]),
   new UlList('Linux Fundamentals And Basic Administration', [
     'Institutions: Sematec Co',
     'Location: Tehran, Iran',
     'Date: 2022',
     'GPA : 95/100',
-    new ULListImage('/assets/cert/lpic1.jpg', 'غلامرضا فداکار لینوکس')
+    new ULListImage('/assets/cert/lpic1.jpg', 'غلامرضا فداکار لینوکس'),
   ]),
   new UlList('Java Standard & Enterprise Edition', [
     'Institutions: Laitec Co',
     'Location: Tehran, Iran',
     'Date: 2022',
     'GPA : 100/100',
-    new ULListImage('/assets/cert/j2ee.jpg', 'غلامرضا فداکار جاوا')
+    new ULListImage('/assets/cert/j2ee.jpg', 'غلامرضا فداکار جاوا'),
   ]),
 ];

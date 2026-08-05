@@ -1,29 +1,24 @@
-import {JSX} from "react";
-import {SkillProgress} from "./index";
-import {SkillLevel} from "../types.ts";
-
-
+import { JSX } from 'react';
+import { SkillProgress } from './index';
+import { SkillLevel, SkillLevelLabel } from '../types.ts';
 interface Props {
-  name: string,
-  level: SkillLevel,
+  name: string;
+  level: SkillLevel;
 }
-
-const Skill: ({name, level}: Props) => JSX.Element = ({name, level}) => {
-
-  const classList = [
-    'flex',
-    'flex-col',
-    'p-4',
-  ].filter(Boolean).join(' ');
-
+const Skill: ({ name, level }: Props) => JSX.Element = ({ name, level }) => {
+  const classList = ['flex', 'flex-col', 'p-4', 'print:p-1'].filter(Boolean).join(' ');
   return (
     <div className={classList}>
-      <div className="mb-2 px-2 flex justify-between font-bold text-gray-500 text-sm print:text-lg">
-        {name}
+      <div className='mb-2 px-2 flex justify-between font-bold text-gray-500 text-sm print:text-xs print:mb-0'>
+        <span>{name}</span>
+        <span className='hidden print:inline text-gray-400 font-normal'>
+          {SkillLevelLabel[level]}
+        </span>
       </div>
-      <SkillProgress level={level}/>
+      <div className='print:hidden'>
+        <SkillProgress level={level} />
+      </div>
     </div>
-  )
-}
-
+  );
+};
 export default Skill;

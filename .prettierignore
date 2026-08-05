@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+coverage/
+.next/
+out/
+
+# Package managers
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Logs
+*.log
+
+# Generated files
+*.min.js
+*.min.css
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+
+# Cache
+.cache/
+.parcel-cache/
+.turbo/
+
+# Storybook
+storybook-static/
+
+# Misc
+public/vendor/
