@@ -9,20 +9,17 @@ interface Props {
 
 const Layout = ({ children }: Props): JSX.Element => {
   return (
-    <div className='bg-gray-100 print:bg-white min-h-screen pt-2 lg:pt-5 print:pt-0 print:min-h-0'>
+    <div className='min-h-screen bg-slate-100 pt-0 print:min-h-0 print:bg-white print:pt-0'>
       <Header />
-      <div className='lg:max-w-7xl lg:mx-auto py-2 px-4 lg:px-12 print:max-w-none print:mx-0 print:py-0 print:px-0'>
-        <div
-          className='grid grid-cols-1 lg:grid-cols-3 lg:gap-4 print:grid-cols-1 print:gap-0'
-          style={{ fontFamily: 'Open Sans' }}
-        >
-          <div className='col-span-1 print:col-span-1 print:mb-3'>
+      <div className='mx-auto max-w-7xl px-3 py-3 sm:px-4 lg:px-12 lg:py-4 print:mx-0 print:max-w-none print:px-0 print:py-0'>
+        <div className='grid grid-cols-1 gap-3 lg:grid-cols-3 lg:gap-5 print:grid-cols-1 print:gap-0'>
+          <div className='col-span-1 min-w-0 print:col-span-1'>
             <Aside />
           </div>
-          <div className='col-span-2 flex flex-col gap-4 mt-4 lg:mt-0 print:col-span-1 print:mt-0 print:gap-0 print:space-y-3'>
+          <main className='col-span-2 flex min-w-0 flex-col gap-3 lg:gap-4 print:col-span-1 print:mt-0 print:gap-2 print:space-y-0'>
             {children}
             <Footer />
-          </div>
+          </main>
         </div>
       </div>
     </div>

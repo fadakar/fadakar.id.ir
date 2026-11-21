@@ -6,3 +6,4 @@ export { default as SkillProgress } from './SkillProgress';
 export { default as SkillList } from './SkillList';
 export { default as ULList } from './UlList';
 export { default as Resume } from './Resume';
+export { default as ExperienceList } from './ExperienceList';

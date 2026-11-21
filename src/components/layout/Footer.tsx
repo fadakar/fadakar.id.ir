@@ -1,17 +1,15 @@
 const Footer = () => {
   return (
-    <>
-      <div className='text-center print:hidden'>
-        <a
-          className='text-gray-400 text-sm'
-          target='_blank'
-          href='https://github.com/fadakar/fadakar.id.ir'
-        >
-          Fork Template On Github
-        </a>
-      </div>
-      <div className='mt-2 lg:mt-0 print:hidden'></div>
-    </>
+    <div className='pb-4 text-center print:hidden'>
+      <a
+        className='text-xs text-slate-400 hover:text-slate-600'
+        target='_blank'
+        rel='noopener noreferrer'
+        href='https://github.com/fadakar/fadakar.id.ir'
+      >
+        View source on GitHub
+      </a>
+    </div>
   );
 };
 

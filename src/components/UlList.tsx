@@ -1,40 +1,80 @@
 import { JSX } from 'react';
 import { ULItem, UlList, ULListImage } from '../types';
+import LinkedText from './LinkedText';
+
 interface Props {
   title: string;
   items: ULItem[];
 }
-const ULList: ({ title, items }: Props) => JSX.Element = ({ title, items }) => {
-  const renderText = (item: any) => {
-    if (item instanceof ULListImage) {
-      return (
-        <a target='_blank' href={item.src} className='block w-full print:hidden'>
-          <img src={item.src} alt={item.alt} className='w-full h-auto rounded' />
-        </a>
-      );
-    } else if (item instanceof UlList) {
-      return <ULList title={item.title} items={item.items} />;
-    }
-    return item;
+
+const splitMeta = (text: string) => {
+  const splitAt = text.indexOf(':');
+  if (splitAt === -1 || splitAt > 28) return null;
+  return {
+    label: text.slice(0, splitAt).trim(),
+    value: text.slice(splitAt + 1).trim(),
   };
+};
+
+const MetaLine = ({ text }: { text: string }) => {
+  const meta = splitMeta(text);
+  if (!meta) {
+    return (
+      <p className='text-sm leading-6 text-slate-700'>
+        <LinkedText text={text} />
+      </p>
+    );
+  }
+
   return (
-    <div className='flex flex-col gap-2 print:gap-1'>
-      <div className='font-bold text-gray-500 print:text-sm'>{title}</div>
-      <div className='ml-10 print:ml-6'>
-        <ul className='list-disc text-gray-500 text-sm print:text-xs text-wrap'>
-          {items.map((item, j) => {
-            const isImage = item instanceof ULListImage;
+    <div className='flex items-baseline justify-between gap-3 text-sm'>
+      <span className='shrink-0 text-slate-500'>{meta.label}</span>
+      <span className='min-w-0 text-right font-medium break-words text-slate-800'>
+        <LinkedText text={meta.value} />
+      </span>
+    </div>
+  );
+};
+
+const ULList: ({ title, items }: Props) => JSX.Element = ({ title, items }) => {
+  const printValues = items
+    .filter((item): item is string => typeof item === 'string')
+    .map((item) => splitMeta(item)?.value ?? item);
+
+  return (
+    <div className='flex flex-col gap-2 print:gap-0.5'>
+      <h3 className='text-sm font-semibold text-slate-800 print:text-[12px]'>
+        {title.replace(/:$/, '')}
+      </h3>
+      <p className='hidden text-[11px] leading-snug text-slate-800 print:block'>
+        {printValues.join(' · ')}
+      </p>
+      <div className='flex flex-col gap-2 print:hidden'>
+        {items.map((item, j) => {
+          if (item instanceof ULListImage) {
             return (
-              <li
+              <a
                 key={j}
-                style={{ paddingBottom: '.2rem' }}
-                className={`print:break-inside-avoid ${isImage ? 'list-none -ml-4 print:my-0 print:hidden' : ''}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                href={item.src}
+                className='block'
               >
-                {renderText(item)}
-              </li>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className='h-auto w-full rounded-lg border border-slate-200'
+                />
+              </a>
             );
-          })}
-        </ul>
+          }
+
+          if (item instanceof UlList) {
+            return <ULList key={j} title={item.title} items={item.items} />;
+          }
+
+          return <MetaLine key={j} text={item} />;
+        })}
       </div>
     </div>
   );

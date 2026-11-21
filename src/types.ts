@@ -7,8 +7,8 @@ export enum SkillLevel {
 
 export const SkillLevelLabel: Record<SkillLevel, string> = {
   [SkillLevel.beginner]: 'Beginner',
-  [SkillLevel.medium]: 'Medium',
-  [SkillLevel.advance]: 'Advance',
+  [SkillLevel.medium]: 'Intermediate',
+  [SkillLevel.advance]: 'Advanced',
   [SkillLevel.expert]: 'Expert',
 };
 

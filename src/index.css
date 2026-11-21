@@ -1,14 +1,41 @@
 @import 'tailwindcss';
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Segoe UI',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @media print {
   @page {
     size: A4;
-    margin: 12mm 10mm;
+    margin: 10mm 12mm;
   }
 
   html,
   body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    background: white;
+    scroll-padding-top: 0;
+    scroll-behavior: auto;
+    -webkit-print-color-adjust: economy;
+    print-color-adjust: economy;
   }
 }

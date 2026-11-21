@@ -18,8 +18,15 @@ const SkillProgress: ({ level }: Props) => JSX.Element = ({ level }) => {
     }
   }, [level]);
   return (
-    <div className='w-full bg-gray-200 rounded-full h-0.5 print:h-0.5'>
-      <div className='bg-blue-600 h-0.5 rounded-full print:h-0.5' style={{ width: width }}></div>
+    <div
+      className='h-1.5 w-full rounded-full bg-slate-200 print:h-0.5'
+      role='meter'
+      aria-valuenow={level}
+      aria-valuemin={1}
+      aria-valuemax={4}
+      aria-valuetext={String(level)}
+    >
+      <div className='h-1.5 rounded-full bg-blue-600 print:h-0.5' style={{ width: width }}></div>
     </div>
   );
 };

@@ -20,9 +20,9 @@ export const INFORMATION = {
 };
 
 export const SUMMERY: string = `
-Passionate full-stack engineer with 9+ years of hands-on experience in developing scalable websites/applications using a wide range of front-end and back-end skills like HTML, CSS, Javascript, PHP, MySQL, laravel framework, angular framework, and etc.
-I developed 30+ websites/applications from scratch in the areas of financial, accounting, treasury, customer relationship management, and warehouse management.
-I am interested in knowledge sharing, exercising, and game playing.
+Senior full-stack and backend engineer with 13+ years of experience building production web systems.
+Core skills are Java, Spring Boot, PHP, Laravel, TypeScript, React, and Angular, with SQL, Kafka, Redis, Docker, and Kubernetes in day-to-day delivery.
+Work spans messaging, finance, CRM, accounting, treasury, logistics, and warehouse platforms.
 `;
 
 export const CLIENT_SIDE_SKILLS: Skill[] = [
@@ -31,66 +31,41 @@ export const CLIENT_SIDE_SKILLS: Skill[] = [
   new Skill('Javascript', SkillLevel.expert),
   new Skill('Typescript', SkillLevel.expert),
   new Skill('Angular', SkillLevel.expert),
-  new Skill('ReactJs', SkillLevel.advance),
-  new Skill('Vuejs/Vuex', SkillLevel.advance),
-  new Skill('Tailwindcss', SkillLevel.expert),
+  new Skill('React', SkillLevel.advance),
+  new Skill('Vue', SkillLevel.advance),
+  new Skill('Tailwind', SkillLevel.expert),
   new Skill('Bootstrap', SkillLevel.expert),
   new Skill('Material UI', SkillLevel.expert),
 ];
 
 export const SERVER_SIDE_SKILLS: Skill[] = [
-  new Skill('JAVA', SkillLevel.expert),
+  new Skill('Java', SkillLevel.expert),
   new Skill('Spring Boot', SkillLevel.advance),
   new Skill('Oracle', SkillLevel.advance),
   new Skill('SQL', SkillLevel.expert),
   new Skill('Kafka', SkillLevel.advance),
   new Skill('Redis', SkillLevel.medium),
-
   new Skill('PHP', SkillLevel.expert),
   new Skill('Laravel', SkillLevel.expert),
   new Skill('MariaDB', SkillLevel.expert),
   new Skill('Nginx', SkillLevel.advance),
-  new Skill('ElasticSearch', SkillLevel.advance),
+  new Skill('Elasticsearch', SkillLevel.advance),
 ];
 
 export const DEVOPS_SKILLS: Skill[] = [
-  new Skill('Linux OS', SkillLevel.advance),
+  new Skill('Linux', SkillLevel.advance),
   new Skill('Bash', SkillLevel.advance),
   new Skill('Git', SkillLevel.expert),
-  new Skill('Postman', SkillLevel.expert),
-  new Skill('Swagger', SkillLevel.medium),
-  new Skill('SOLID', SkillLevel.expert),
-  new Skill('Design Patterns', SkillLevel.expert),
-  new Skill('Agile/Scrum/Kanban', SkillLevel.expert),
   new Skill('Docker', SkillLevel.expert),
   new Skill('Docker Swarm', SkillLevel.advance),
-
+  new Skill('Kubernetes', SkillLevel.medium),
   new Skill('CI/CD', SkillLevel.medium),
-  new Skill('GitLab/Github', SkillLevel.expert),
-
+  new Skill('GitLab', SkillLevel.expert),
+  new Skill('GitHub', SkillLevel.expert),
   new Skill('Prometheus', SkillLevel.advance),
   new Skill('Grafana', SkillLevel.advance),
-
-  new Skill('Analysis & Design', SkillLevel.expert),
-  new Skill('Problem solving ability', SkillLevel.expert),
-  new Skill('Creativity and innovation', SkillLevel.expert),
-  new Skill('Team work', SkillLevel.expert),
-];
-
-export const FAMILIAR_SKILLS: Skill[] = [
-  new Skill('Symfony Framework', SkillLevel.advance),
-  new Skill('CodeIgniter Framework', SkillLevel.medium),
-  new Skill('CakePhp Framework', SkillLevel.beginner),
-
-  new Skill('TDD', SkillLevel.beginner),
-  new Skill('NoSql/Mongodb', SkillLevel.expert),
-
-  new Skill('Kubernetes', SkillLevel.medium),
-  new Skill('Jenkins', SkillLevel.medium),
-  new Skill('Ansible', SkillLevel.medium),
-
-  new Skill('Node.js', SkillLevel.medium),
-  new Skill('Express.js', SkillLevel.medium),
+  new Skill('Postman', SkillLevel.expert),
+  new Skill('Swagger', SkillLevel.medium),
 ];
 
 export const LANGUAGE_SKILLS: SkillSection[] = [
@@ -132,6 +107,10 @@ export const EXPERIENCE: UlList[] = [
     'Location: Tehran, Iran',
     'Date: Aug 2025 - Now',
     'Technologies: Java, Spring Boot, Oracle, Kafka, Redis, CI/CD, Kubernetes, Ceph S3 Storage',
+    new UlList('Achievements:', [
+      'Created business.splus.ir, a unified gateway for bulk messaging across messengers',
+      'Built messenger advertising management for campaigns on business.splus.ir',
+    ]),
   ]),
   new UlList('Full Stack Developer', [
     'Company: Mohaymen CO ( Soroush Plus Messenger )',

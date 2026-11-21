@@ -2,20 +2,41 @@ import { JSX, ReactNode } from 'react';
 interface Props {
   children?: ReactNode;
   title: string;
+  id?: string;
+  dense?: boolean;
+  screenOnly?: boolean;
 }
-const Card: ({ children, title }: Props) => JSX.Element = ({ children, title }) => {
+const Card: ({ children, title, id, dense, screenOnly }: Props) => JSX.Element = ({
+  children,
+  title,
+  id,
+  dense,
+  screenOnly,
+}) => {
   return (
-    <div
-      className='relative bg-white rounded-lg ring-[1.5px] ring-gray-300 shadow-md overflow-hidden
-                 print:rounded-none print:ring-0 print:shadow-none print:overflow-visible print:bg-white print:border print:border-gray-300 print:break-inside-avoid'
+    <section
+      id={id}
+      className={`relative overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 print:overflow-visible print:rounded-none print:bg-transparent print:shadow-none print:ring-0 ${
+        screenOnly ? 'print:hidden' : ''
+      }`}
     >
-      <div className='flex flex-col gap-2 border-b border-b-gray-200 p-4 bg-gray-100 print:bg-gray-100 print:border-b-gray-300 print:p-2 print:break-inside-avoid print:break-after-avoid'>
-        <div className='flex '>
-          <div className='text-gray-600 font-bold print:text-base'>{title}</div>
-        </div>
+      <div
+        className={`border-b border-slate-200 bg-slate-50 print:border-b print:border-slate-900 print:bg-transparent print:px-0 print:py-1 ${
+          dense ? 'px-3 py-2' : 'px-4 py-3 sm:px-5'
+        }`}
+      >
+        <h2
+          className={`font-semibold text-slate-800 print:text-[11px] print:font-bold print:uppercase print:tracking-wider ${
+            dense ? 'text-sm' : 'text-base'
+          }`}
+        >
+          {title}
+        </h2>
       </div>
-      <div className='p-4 pb-6 print:p-2 print:pb-3'>{children}</div>
-    </div>
+      <div className={dense ? 'p-3 print:px-0 print:py-1.5' : 'p-4 sm:p-5 print:px-0 print:py-1.5'}>
+        {children}
+      </div>
+    </section>
   );
 };
 export default Card;

@@ -1,40 +1,60 @@
 import { JSX } from 'react';
 import { Card, Skill as SkillComponent } from './index';
 import { Skill, SkillSection } from '../types';
+
 interface Props {
   title: string;
   skills: Skill[] | SkillSection[];
+  id?: string;
 }
-const SkillList: ({ title, skills }: Props) => JSX.Element = ({ title, skills }) => {
+
+const printLine = (skills: Skill[], title?: string) => {
+  if (title) return title;
+  return skills.map((skill) => skill.name).join(', ');
+};
+
+const SkillChips = ({ skills }: { skills: Skill[] }) => {
+  return (
+    <ul className='flex flex-wrap gap-1.5 print:hidden'>
+      {skills.map((skill) => (
+        <SkillComponent key={skill.name} name={skill.name} />
+      ))}
+    </ul>
+  );
+};
+
+const PrintLine = ({ line }: { line: string }) => {
+  return <p className='hidden text-[11px] leading-snug text-slate-800 print:block'>{line}</p>;
+};
+
+const SkillList: ({ title, skills, id }: Props) => JSX.Element = ({ title, skills, id }) => {
   const isSection = skills[0] instanceof SkillSection;
+
   const renderContent = () => {
     if (!isSection) {
+      const list = skills.filter((skill): skill is Skill => skill instanceof Skill);
       return (
-        <div className='grid grid-cols-2 lg:grid-cols-3 print:grid-cols-2 px-2'>
-          {skills.map((skill, i) => {
-            if (skill instanceof Skill) {
-              return <SkillComponent key={i} name={skill.name} level={skill.level} />;
-            }
-          })}
+        <>
+          <SkillChips skills={list} />
+          <PrintLine line={printLine(list)} />
+        </>
+      );
+    }
+
+    return (skills as SkillSection[]).map((section) => {
+      return (
+        <div key={section.title} className='mt-2 first:mt-0 print:mt-1'>
+          <p className='text-sm font-medium text-slate-800 print:hidden'>{section.title}</p>
+          <PrintLine line={printLine(section.skills, section.title)} />
         </div>
       );
-    } else {
-      return skills.map((skill, i) => {
-        if (skill instanceof SkillSection) {
-          return (
-            <div key={i} className='flex flex-col gap-2 px-2 mt-4 print:mt-2 w-full'>
-              <div className='font-bold text-gray-500 print:text-sm'>{skill.title}</div>
-              <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 px-2 print:grid-cols-2 print:gap-2'>
-                {skill.skills.map((subSkill: Skill, j: number) => {
-                  return <SkillComponent key={j} name={subSkill.name} level={subSkill.level} />;
-                })}
-              </div>
-            </div>
-          );
-        }
-      });
-    }
+    });
   };
-  return <Card title={title}>{renderContent()}</Card>;
+
+  return (
+    <Card title={title} id={id} dense>
+      {renderContent()}
+    </Card>
+  );
 };
 export default SkillList;
