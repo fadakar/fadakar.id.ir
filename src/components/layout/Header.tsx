@@ -3,9 +3,9 @@ import { INFORMATION } from '../../settings';
 
 const SECTIONS = [
   { id: 'summary', label: 'Summary' },
+  { id: 'experience', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
   { id: 'education', label: 'Education' },
-  { id: 'experience', label: 'Experience' },
   { id: 'certification', label: 'Certificates' },
   { id: 'languages', label: 'Languages' },
 ];

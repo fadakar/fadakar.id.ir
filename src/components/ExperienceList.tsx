@@ -77,9 +77,11 @@ const ExperienceList = ({ items }: Props) => {
           return (
             <article
               key={`${heading}-${job.date ?? job.title}`}
-              className='py-4 first:pt-0 last:pb-0 print:break-inside-auto print:py-1.5'
+              className={`py-4 first:pt-0 last:pb-0 print:py-1.5 ${
+                job.achievements.length <= 4 ? 'print:break-inside-avoid' : 'print:break-inside-auto'
+              }`}
             >
-              <div className='flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between print:flex-row print:justify-between'>
+              <div className='flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between print:flex-row print:justify-between print:break-inside-avoid print:break-after-avoid'>
                 <div className='min-w-0'>
                   <div className='flex flex-wrap items-center gap-2'>
                     <h3 className='text-base font-semibold text-slate-900 print:text-[12px]'>

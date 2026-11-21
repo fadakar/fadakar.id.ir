@@ -27,9 +27,12 @@ const Resume = () => {
             ))}
         </div>
       </Card>
-      <SkillList id='skills' title={'Client Side'} skills={CLIENT_SIDE_SKILLS} />
-      <SkillList title={'Server Side'} skills={SERVER_SIDE_SKILLS} />
-      <SkillList title={'Development & Operations'} skills={DEVOPS_SKILLS} />
+      <ExperienceList items={EXPERIENCE} />
+      <Card title={'Skills'} id='skills'>
+        <SkillList bare title={'Client'} skills={CLIENT_SIDE_SKILLS} />
+        <SkillList bare title={'Server'} skills={SERVER_SIDE_SKILLS} />
+        <SkillList bare title={'Tools'} skills={DEVOPS_SKILLS} />
+      </Card>
       <Card title={'Education'} id='education'>
         <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 print:grid-cols-2 print:gap-3'>
           {EDUCATIONS.map((ulList, i) => {
@@ -37,7 +40,6 @@ const Resume = () => {
           })}
         </div>
       </Card>
-      <ExperienceList items={EXPERIENCE} />
       <Card title={'Certification'} id='certification'>
         <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 print:grid-cols-2 print:gap-2'>
           {CERTIFICATIONS.map((ulList, i) => {
