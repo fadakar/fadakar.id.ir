@@ -4,7 +4,7 @@ import { SkillLevel, Skill, SkillSection, UlList, ULListImage } from './types';
 export const GOOGLE_TAG_ID: string | undefined = 'G-8V4FTZG54C';
 export const INFORMATION = {
   profileImage: '/assets/img/profile.png',
-  profileBackgroundImage: '/assets/img/profile-bg.webp',
+  profileBackgroundImage: '/assets/img/profile-bg.svg',
   name: 'Gholamreza Fadakar',
   nameFa: 'غلامرضا فداکار',
   PDFFile: '/assets/pdf/gholamreza-fadakar-resume.pdf',
@@ -32,7 +32,7 @@ export const CLIENT_SIDE_SKILLS: Skill[] = [
   new Skill('Typescript', SkillLevel.expert),
   new Skill('Angular', SkillLevel.expert),
   new Skill('React', SkillLevel.advance),
-  new Skill('Vue', SkillLevel.advance),
+  new Skill('Next.js', SkillLevel.advance),
   new Skill('Tailwind', SkillLevel.expert),
   new Skill('Bootstrap', SkillLevel.expert),
   new Skill('Material UI', SkillLevel.expert),

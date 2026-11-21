@@ -43,7 +43,7 @@ const SkillList: ({ title, skills, id, bare }: Props) => JSX.Element = ({
       return (
         <div className={bare ? 'mt-3 first:mt-0 print:mt-1' : undefined}>
           {bare && (
-            <h3 className='mb-1.5 text-xs font-semibold tracking-wide text-slate-500 uppercase print:mb-0 print:text-[11px]'>
+            <h3 className='mb-1.5 text-xs font-semibold text-accent print:mb-0 print:text-[11px] print:text-black'>
               {title}
             </h3>
           )}
@@ -57,7 +57,7 @@ const SkillList: ({ title, skills, id, bare }: Props) => JSX.Element = ({
       <>
         {(skills as SkillSection[]).map((section) => (
           <div key={section.title} className='mt-2 first:mt-0 print:mt-1'>
-            <p className='text-sm font-medium text-slate-800 print:hidden'>{section.title}</p>
+            <p className='text-sm font-medium text-ink print:hidden'>{section.title}</p>
             <PrintLine line={printLine(section.skills, section.title, false)} />
           </div>
         ))}

@@ -7,7 +7,7 @@ export const SKILL_ICONS: Record<string, string[]> = {
   Typescript: [`${ICON}/typescript/typescript-original.svg`],
   Angular: [`${ICON}/angular/angular-original.svg`],
   React: [`${ICON}/react/react-original.svg`],
-  Vue: [`${ICON}/vuejs/vuejs-original.svg`],
+  'Next.js': [`${ICON}/nextjs/nextjs-original.svg`],
   Tailwind: [`${ICON}/tailwindcss/tailwindcss-original.svg`],
   Bootstrap: [`${ICON}/bootstrap/bootstrap-original.svg`],
   'Material UI': [`${ICON}/materialui/materialui-original.svg`],

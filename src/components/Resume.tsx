@@ -16,7 +16,7 @@ const Resume = () => {
   return (
     <>
       <Card title={'Summary'} id='summary'>
-        <div className='space-y-3 text-sm leading-6 text-slate-700 print:space-y-1 print:text-[11px] print:leading-snug'>
+        <div className='space-y-3 text-base leading-7 text-ink print:space-y-1 print:text-[11px] print:leading-snug'>
           {SUMMERY.split('\n')
             .map((line) => line.trim())
             .filter(Boolean)

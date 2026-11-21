@@ -1,5 +1,4 @@
 import { INFORMATION } from '../../settings';
-import { Card } from '../index';
 
 const contacts = [
   {
@@ -31,45 +30,92 @@ const contacts = [
 
 const Aside = () => {
   return (
-    <div className='flex flex-col gap-3 lg:sticky lg:top-14 lg:gap-2.5 print:block print:gap-0'>
+    <div className='lg:sticky lg:top-20 lg:z-20 print:static'>
       <div
         id='profile'
-        className='overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 print:hidden'
+        className='overflow-hidden rounded-2xl bg-card ring-1 ring-line print:hidden'
       >
         <img
-          className='h-36 w-full object-cover object-center select-none'
+          className='block h-auto w-full select-none'
           draggable='false'
           src={INFORMATION.profileBackgroundImage}
-          alt=''
+          alt='Gholamreza Fadakar'
         />
 
-        <div className='relative h-10'>
-          <img
-            className='absolute left-4 -top-8 h-16 w-16 rounded-xl object-cover shadow-md ring-4 ring-white'
-            draggable='false'
-            src={INFORMATION.profileImage}
-            alt={`${INFORMATION.nameFa} ${INFORMATION.name}`}
-          />
-        </div>
+        <div className='px-4 pb-4'>
+          <div className='flex items-center gap-3 pt-4'>
+            <img
+              className='h-14 w-14 shrink-0 rounded-xl object-cover ring-1 ring-line'
+              draggable='false'
+              src={INFORMATION.profileImage}
+              alt={`${INFORMATION.nameFa} ${INFORMATION.name}`}
+            />
+            <div className='min-w-0'>
+              <h1 className='text-xl leading-tight font-semibold tracking-tight text-ink'>
+                {INFORMATION.name}
+              </h1>
+              <p className='mt-0.5 text-sm text-muted'>{INFORMATION.position}</p>
+            </div>
+          </div>
+          <p className='mt-2 text-xs text-muted'>
+            {INFORMATION.location}
+            <span className='px-1.5 text-line'>·</span>
+            {INFORMATION.experienceTime}
+            <span className='px-1.5 text-line'>·</span>
+            {INFORMATION.birthday}
+          </p>
 
-        <div className='flex flex-col gap-0.5 px-4 pb-3'>
-          <h1 className='text-lg font-semibold tracking-tight text-slate-900'>
-            {INFORMATION.name}
-          </h1>
-          <p className='text-sm text-slate-600'>{INFORMATION.position}</p>
-        </div>
+          <div className='mt-3 flex flex-wrap gap-x-3 gap-y-1 border-t border-line pt-3 lg:hidden'>
+            {contacts.map((row) => (
+              <a
+                key={row.label}
+                className='inline-flex min-h-10 items-center text-sm font-medium text-accent'
+                target={row.href.startsWith('http') ? '_blank' : undefined}
+                rel={row.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                href={row.href}
+              >
+                {row.label === 'Website' ? row.value : row.label}
+              </a>
+            ))}
+          </div>
+          <div className='mt-3 hidden border-t border-line pt-2 lg:block'>
+            {contacts.map((row) => (
+              <a
+                key={row.label}
+                className='flex items-center justify-between gap-3 py-1 text-sm'
+                target={row.href.startsWith('http') ? '_blank' : undefined}
+                rel={row.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                href={row.href}
+              >
+                <span className='shrink-0 text-muted'>{row.label}</span>
+                <span className='min-w-0 text-right font-medium break-all text-accent'>
+                  {row.value}
+                </span>
+              </a>
+            ))}
+          </div>
 
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href={INFORMATION.PDFFile}
-          className='flex min-h-10 w-full items-center justify-center bg-slate-900 text-sm font-semibold text-white hover:bg-slate-800'
-        >
-          Download PDF
-        </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href={INFORMATION.PDFFile}
+            className='mt-3 flex min-h-10 items-center justify-center gap-2 rounded-full bg-accent-fill text-sm font-semibold text-on-accent hover:bg-accent-fill-hover'
+          >
+            <svg viewBox='0 0 24 24' className='h-4 w-4' fill='none' aria-hidden='true'>
+              <path
+                d='M12 4v10m0 0 4-4m-4 4-4-4M5 19h14'
+                stroke='currentColor'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              />
+            </svg>
+            Download PDF
+          </a>
+        </div>
       </div>
 
-      <header className='mb-3 hidden border-b border-slate-900 pb-2 print:block'>
+      <header className='mb-3 hidden border-b border-black pb-2 print:block'>
         <div className='flex items-center gap-3'>
           <img
             className='h-14 w-14 shrink-0 rounded-md'
@@ -78,11 +124,11 @@ const Aside = () => {
             alt=''
           />
           <div className='min-w-0'>
-            <p className='text-lg font-bold leading-tight text-slate-900'>{INFORMATION.name}</p>
-            <p className='text-xs text-slate-700'>{INFORMATION.position}</p>
+            <p className='text-lg leading-tight font-bold text-black'>{INFORMATION.name}</p>
+            <p className='text-xs text-black'>{INFORMATION.position}</p>
           </div>
         </div>
-        <p className='mt-1.5 text-[11px] leading-snug text-slate-800'>
+        <p className='mt-1.5 text-[11px] leading-snug text-black'>
           {INFORMATION.location}
           {' · '}
           {INFORMATION.phone}
@@ -95,44 +141,12 @@ const Aside = () => {
           {' · '}
           LinkedIn
         </p>
-        <p className='text-[11px] text-slate-700'>
+        <p className='text-[11px] text-black'>
           {INFORMATION.experienceTime}
           {' · '}
           Born {INFORMATION.birthday}
         </p>
       </header>
-
-      <Card title='Information' dense screenOnly>
-        <div>
-          <dl className='grid grid-cols-[auto_1fr] gap-x-3 gap-y-1.5 text-sm'>
-            <dt className='text-slate-500'>Location</dt>
-            <dd className='text-right font-medium text-slate-800'>{INFORMATION.location}</dd>
-            <dt className='text-slate-500'>Experience</dt>
-            <dd className='text-right font-medium text-slate-800'>{INFORMATION.experienceTime}</dd>
-            <dt className='text-slate-500'>Birthday</dt>
-            <dd className='text-right font-medium text-slate-800'>{INFORMATION.birthday}</dd>
-          </dl>
-        </div>
-      </Card>
-
-      <Card title='Contact' id='contact' dense screenOnly>
-        <div className='flex flex-col'>
-          {contacts.map((row) => (
-            <a
-              key={row.label}
-              className='flex min-h-11 items-center justify-between gap-3 rounded-md px-1 text-sm hover:bg-slate-50 lg:min-h-0 lg:py-1'
-              target={row.href.startsWith('http') ? '_blank' : undefined}
-              rel={row.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              href={row.href}
-            >
-              <span className='shrink-0 text-slate-500'>{row.label}</span>
-              <span className='min-w-0 text-right font-medium break-all text-blue-700'>
-                {row.value}
-              </span>
-            </a>
-          ))}
-        </div>
-      </Card>
     </div>
   );
 };

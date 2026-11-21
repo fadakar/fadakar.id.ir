@@ -23,7 +23,7 @@ const LinkedText = ({ text }: Props) => {
         href={`https://${domain}`}
         target='_blank'
         rel='noopener noreferrer'
-        className='font-medium text-blue-700 underline decoration-blue-200 underline-offset-2 hover:decoration-blue-700'
+        className='font-medium text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent'
       >
         {domain}
       </a>,

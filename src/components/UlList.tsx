@@ -20,7 +20,7 @@ const MetaLine = ({ text }: { text: string }) => {
   const meta = splitMeta(text);
   if (!meta) {
     return (
-      <p className='text-sm leading-6 text-slate-700'>
+      <p className='text-sm leading-6 text-ink'>
         <LinkedText text={text} />
       </p>
     );
@@ -28,8 +28,8 @@ const MetaLine = ({ text }: { text: string }) => {
 
   return (
     <div className='flex items-baseline justify-between gap-3 text-sm'>
-      <span className='shrink-0 text-slate-500'>{meta.label}</span>
-      <span className='min-w-0 text-right font-medium break-words text-slate-800'>
+      <span className='shrink-0 text-muted'>{meta.label}</span>
+      <span className='min-w-0 text-right font-medium break-words text-ink'>
         <LinkedText text={meta.value} />
       </span>
     </div>
@@ -43,7 +43,7 @@ const ULList: ({ title, items }: Props) => JSX.Element = ({ title, items }) => {
 
   return (
     <div className='flex flex-col gap-2 print:gap-0.5'>
-      <h3 className='text-sm font-semibold text-slate-800 print:text-[12px]'>
+      <h3 className='text-sm font-semibold text-ink print:text-[12px]'>
         {title.replace(/:$/, '')}
       </h3>
       <p className='hidden text-[11px] leading-snug text-slate-800 print:block'>

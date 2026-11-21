@@ -68,7 +68,7 @@ function parseJob(list: UlList): Job {
 const ExperienceList = ({ items }: Props) => {
   return (
     <Card title='Experience' id='experience'>
-      <div className='flex flex-col divide-y divide-slate-200 print:divide-slate-300'>
+      <div className='flex flex-col divide-y divide-line print:divide-black/20'>
         {items.map((item) => {
           const job = parseJob(item);
           const isCurrent = (job.date ?? '').toLowerCase().includes('now');
@@ -78,52 +78,40 @@ const ExperienceList = ({ items }: Props) => {
             <article
               key={`${heading}-${job.date ?? job.title}`}
               className={`py-4 first:pt-0 last:pb-0 print:py-1.5 ${
-                job.achievements.length <= 4 ? 'print:break-inside-avoid' : 'print:break-inside-auto'
+                job.achievements.length <= 4
+                  ? 'print:break-inside-avoid'
+                  : 'print:break-inside-auto'
               }`}
             >
               <div className='flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between print:flex-row print:justify-between print:break-inside-avoid print:break-after-avoid'>
-                <div className='min-w-0'>
-                  <div className='flex flex-wrap items-center gap-2'>
-                    <h3 className='text-base font-semibold text-slate-900 print:text-[12px]'>
-                      {heading}
-                    </h3>
-                    {isCurrent && (
-                      <span className='inline-flex items-center rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700 ring-1 ring-emerald-200 print:hidden'>
-                        Current
-                      </span>
-                    )}
-                  </div>
+                <h3 className='min-w-0 text-base font-semibold text-ink print:text-[12px]'>
+                  {heading}
                   {job.company && (
-                    <p className='text-sm text-slate-600 print:text-[11px]'>
+                    <span className='font-normal text-muted'>
+                      {' · '}
                       <LinkedText text={job.company} />
-                    </p>
+                    </span>
                   )}
-                </div>
-                <p className='shrink-0 text-sm text-slate-500 sm:text-right print:text-[11px] print:text-slate-700'>
+                </h3>
+                <p
+                  className={`shrink-0 text-sm sm:text-right print:text-[11px] print:text-black ${
+                    isCurrent
+                      ? 'font-medium text-accent print:font-normal print:text-black'
+                      : 'text-muted'
+                  }`}
+                >
                   {[job.date, job.location].filter(Boolean).join(' · ')}
                 </p>
               </div>
 
               {job.technologies.length > 0 && (
-                <>
-                  <ul className='mt-2 flex flex-wrap gap-1 print:hidden'>
-                    {job.technologies.map((tech) => (
-                      <li
-                        key={tech}
-                        className='rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700'
-                      >
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className='mt-0.5 hidden text-[11px] leading-snug text-slate-700 print:block'>
-                    {job.technologies.join(', ')}
-                  </p>
-                </>
+                <p className='mt-1 text-[13px] leading-snug text-muted print:text-[11px] print:text-black'>
+                  {job.technologies.join(', ')}
+                </p>
               )}
 
               {job.achievements.length > 0 && (
-                <ul className='mt-2 list-disc space-y-1 pl-4 text-sm leading-6 text-slate-700 print:mt-0.5 print:space-y-0 print:text-[11px] print:leading-snug'>
+                <ul className='mt-2 list-disc space-y-1 pl-4 text-[15px] leading-6 text-ink print:mt-0.5 print:space-y-0 print:text-[11px] print:leading-snug'>
                   {job.achievements.map((achievement) => (
                     <li key={achievement}>
                       <LinkedText text={achievement} />

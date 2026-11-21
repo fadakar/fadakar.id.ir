@@ -1,5 +1,31 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-paper: #f3efe8;
+  --color-ink: #1c1917;
+  --color-muted: #6f675f;
+  --color-line: #e6dfd6;
+  --color-accent: #1b4f46;
+  --color-accent-soft: #e7f2ef;
+  --color-accent-fill: #1b4f46;
+  --color-accent-fill-hover: #143f38;
+  --color-on-accent: #ffffff;
+  --color-card: #ffffff;
+}
+
+[data-theme='dark'] {
+  --color-paper: #141210;
+  --color-card: #221f1c;
+  --color-ink: #f4efe8;
+  --color-muted: #b7aea4;
+  --color-line: #3a342e;
+  --color-accent: #8fd0c4;
+  --color-accent-soft: #243833;
+  --color-accent-fill: #1b4f46;
+  --color-accent-fill-hover: #143f38;
+  --color-on-accent: #f4efe8;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -7,15 +33,136 @@ html {
 
 body {
   margin: 0;
-  font-family:
-    'Segoe UI',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    sans-serif;
-  color: #0f172a;
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-ink);
+  background: var(--color-paper);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+h1,
+.font-serif {
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.section-nav {
+  scrollbar-width: none;
+}
+
+.section-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.theme-toggle {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-line);
+  padding: 0;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+::view-transition,
+::view-transition-group(*),
+::view-transition-image-pair(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+  pointer-events: none !important;
+}
+
+::view-transition-group(root) {
+  animation: none;
+}
+
+html.theme-revealing::view-transition-group(root) {
+  animation: theme-root-stay 750ms linear both;
+}
+
+html.theme-revealing[data-theme='light']::view-transition-group(root) {
+  animation-duration: 500ms;
+}
+
+::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  overflow: clip;
+  object-fit: none;
+  object-position: top left;
+  pointer-events: none;
+}
+
+html.theme-revealing[data-theme='dark']::view-transition-old(root) {
+  z-index: 1;
+}
+
+html.theme-revealing[data-theme='dark']::view-transition-new(root) {
+  z-index: 2;
+  animation: theme-reveal 750ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+html.theme-revealing[data-theme='light']::view-transition-new(root) {
+  z-index: 1;
+  animation: none;
+}
+
+html.theme-revealing[data-theme='light']::view-transition-old(root) {
+  z-index: 2;
+  animation: theme-reveal-back 500ms cubic-bezier(0.55, 0, 0.3, 0.2) both;
+}
+
+@keyframes theme-root-stay {
+  from,
+  to {
+    transform: none;
+  }
+}
+
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(1.25rem at var(--theme-x, 50%) var(--theme-y, 50%));
+  }
+  to {
+    clip-path: circle(var(--theme-r, 100vmax) at var(--theme-x, 50%) var(--theme-y, 50%));
+  }
+}
+
+@keyframes theme-reveal-back {
+  from {
+    clip-path: circle(var(--theme-r, 100vmax) at var(--theme-x, 50%) var(--theme-y, 50%));
+  }
+  to {
+    clip-path: circle(0 at var(--theme-x, 50%) var(--theme-y, 50%));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -32,7 +179,14 @@ body {
 
   html,
   body {
+    --color-paper: #fff;
+    --color-card: #fff;
+    --color-ink: #000;
+    --color-muted: #333;
+    --color-line: #000;
+    --color-accent: #1b4f46;
     background: white;
+    color: black;
     scroll-padding-top: 0;
     scroll-behavior: auto;
     -webkit-print-color-adjust: economy;

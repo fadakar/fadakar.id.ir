@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { INFORMATION } from '../../settings';
+import ThemeToggle from '../theme/ThemeToggle';
 
 const SECTIONS = [
   { id: 'summary', label: 'Summary' },
@@ -12,22 +12,49 @@ const SECTIONS = [
 
 const Header = () => {
   const [active, setActive] = useState('summary');
+  const [indicator, setIndicator] = useState({
+    left: 0,
+    width: 0,
+    top: 0,
+    height: 0,
+    ready: false,
+  });
   const navRef = useRef<HTMLElement>(null);
   const paused = useRef(false);
   const updateRef = useRef<() => void>(() => {});
 
   useEffect(() => {
+    const place = () => {
+      const nav = navRef.current;
+      const link = nav?.querySelector(`a[href="#${active}"]`);
+      if (!(nav instanceof HTMLElement) || !(link instanceof HTMLElement)) return;
+
+      const desktop = window.matchMedia('(min-width: 1024px)').matches;
+      setIndicator({
+        left: link.offsetLeft,
+        width: link.offsetWidth,
+        top: desktop ? link.offsetTop + link.offsetHeight - 2 : link.offsetTop,
+        height: desktop ? 2 : link.offsetHeight,
+        ready: true,
+      });
+    };
+
+    place();
+    window.addEventListener('resize', place);
+
     const nav = navRef.current;
     const link = nav?.querySelector(`a[href="#${active}"]`);
-    if (!(nav instanceof HTMLElement) || !(link instanceof HTMLElement)) return;
+    if (nav instanceof HTMLElement && link instanceof HTMLElement) {
+      const navRect = nav.getBoundingClientRect();
+      const linkRect = link.getBoundingClientRect();
+      const visible = linkRect.left >= navRect.left + 2 && linkRect.right <= navRect.right - 2;
+      if (!visible) {
+        const delta = linkRect.left - navRect.left - (nav.clientWidth - linkRect.width) / 2;
+        nav.scrollTo({ left: Math.max(0, nav.scrollLeft + delta), behavior: 'smooth' });
+      }
+    }
 
-    const navRect = nav.getBoundingClientRect();
-    const linkRect = link.getBoundingClientRect();
-    const visible = linkRect.left >= navRect.left + 2 && linkRect.right <= navRect.right - 2;
-    if (visible) return;
-
-    const delta = linkRect.left - navRect.left - (nav.clientWidth - linkRect.width) / 2;
-    nav.scrollTo({ left: Math.max(0, nav.scrollLeft + delta), behavior: 'auto' });
+    return () => window.removeEventListener('resize', place);
   }, [active]);
 
   useEffect(() => {
@@ -107,14 +134,33 @@ const Header = () => {
   return (
     <header
       data-site-header
-      className='sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur print:hidden'
+      className='sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur print:hidden'
     >
       <div className='flex items-center gap-2 px-3 py-2 sm:px-4'>
         <nav
           ref={navRef}
           aria-label='Resume sections'
-          className='flex min-w-0 flex-1 gap-1.5 overflow-x-auto'
+          className='section-nav relative flex min-w-0 flex-1 gap-1 overflow-x-auto'
         >
+          <span
+            aria-hidden='true'
+            className={`pointer-events-none absolute z-0 motion-reduce:transition-none ${
+              indicator.ready
+                ? 'transition-[left,width,top,height] duration-300 ease-out'
+                : ''
+            } ${
+              indicator.height > 4
+                ? 'rounded-full bg-accent-fill'
+                : 'rounded-none bg-accent'
+            }`}
+            style={{
+              left: indicator.left,
+              width: indicator.width,
+              top: indicator.top,
+              height: indicator.height,
+              opacity: indicator.ready ? 1 : 0,
+            }}
+          />
           {SECTIONS.map((section) => {
             const isActive = active === section.id;
             return (
@@ -123,10 +169,8 @@ const Header = () => {
                 href={`#${section.id}`}
                 aria-current={isActive ? 'true' : undefined}
                 onClick={() => selectSection(section.id)}
-                className={`inline-flex min-h-9 shrink-0 items-center rounded-full px-3 text-[13px] font-medium ${
-                  isActive
-                    ? 'bg-slate-900 text-white'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                className={`relative z-10 inline-flex min-h-10 shrink-0 items-center rounded-full px-3 text-[13px] font-medium transition-colors duration-300 lg:min-h-11 lg:rounded-none lg:px-2.5 ${
+                  isActive ? 'text-on-accent lg:text-accent' : 'text-muted hover:text-ink'
                 }`}
               >
                 {section.label}
@@ -134,14 +178,7 @@ const Header = () => {
             );
           })}
         </nav>
-        <a
-          href={INFORMATION.PDFFile}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='inline-flex min-h-9 shrink-0 items-center rounded-full bg-slate-900 px-3 text-xs font-semibold text-white lg:hidden'
-        >
-          PDF
-        </a>
+        <ThemeToggle />
       </div>
     </header>
   );

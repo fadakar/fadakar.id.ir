@@ -64,12 +64,17 @@ const Skill: ({ name }: Props) => JSX.Element = ({ name }) => {
   const icons = SKILL_ICONS[name] ?? [];
 
   return (
-    <li className='inline-flex h-9 max-w-full items-center gap-1.5 rounded-md border border-slate-200 bg-white py-1 pr-2.5 pl-1.5 text-sm font-medium text-slate-800 print:hidden'>
+    <li className='inline-flex h-9 max-w-full items-center gap-1.5 rounded-md border border-line bg-paper/70 py-1 pr-2.5 pl-1.5 text-sm font-medium text-ink print:hidden'>
       {icons.map((icon) =>
         icon.startsWith('local:') ? (
           <LocalIcon key={icon} kind={icon} />
         ) : (
-          <img key={icon} src={icon} alt='' className='h-6 w-6 shrink-0' />
+          <img
+            key={icon}
+            src={icon}
+            alt=''
+            className={`h-6 w-6 shrink-0${icon.includes('/nextjs/') ? ' [[data-theme=dark]_&]:invert' : ''}`}
+          />
         ),
       )}
       <span className='truncate'>{name}</span>
