@@ -9,8 +9,8 @@ export const readTheme = (): ThemeName => {
 };
 
 const themeColor: Record<ThemeName, string> = {
-  light: '#f3efe8',
-  dark: '#141210',
+  light: '#102e34',
+  dark: '#0e2429',
 };
 
 export const applyTheme = (theme: ThemeName) => {

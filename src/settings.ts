@@ -1,224 +1,213 @@
-import { calculateYearsToNow } from './utils/datetime';
-import { SkillLevel, Skill, SkillSection, UlList, ULListImage } from './types';
-
 export const GOOGLE_TAG_ID: string | undefined = 'G-8V4FTZG54C';
+
 export const INFORMATION = {
-  profileImage: '/assets/img/profile.png',
-  profileBackgroundImage: '/assets/img/profile-bg.svg',
   name: 'Gholamreza Fadakar',
   nameFa: 'غلامرضا فداکار',
+  profileImage: '/assets/img/profile.webp',
   PDFFile: '/assets/pdf/gholamreza-fadakar-resume.pdf',
-  position: 'Full-Stack Software Engineer',
-  location: 'Iran, Tehran',
-  experienceTime: calculateYearsToNow('2013-01-01'),
-  birthday: '1994',
+  position: 'Senior Full-Stack Engineer',
+  careerStart: 2013,
+  location: 'Tehran, Iran',
   phone: '+989190074754',
   email: 'fadakargholamreza@gmail.com',
   website: 'https://fdkr.ir',
-  github: 'https://www.github.com/fadakar',
+  github: 'https://github.com/fadakar',
   linkedin: 'https://ir.linkedin.com/in/gholamreza-fadakar-759300b1',
 };
 
-export const SUMMERY: string = `
-Senior full-stack and backend engineer with 13+ years of experience building production web systems.
-Core skills are Java, Spring Boot, PHP, Laravel, TypeScript, React, and Angular, with SQL, Kafka, Redis, Docker, and Kubernetes in day-to-day delivery.
-Work spans messaging, finance, CRM, accounting, treasury, logistics, and warehouse platforms.
-`;
+export const SUMMARY =
+  'I build messaging software at Soroush Plus, including its web client and bulk-messaging gateway. Previously, I developed parcel systems for Iran National Post and financial software for Hamyar Sanat.';
 
-export const CLIENT_SIDE_SKILLS: Skill[] = [
-  new Skill('Html', SkillLevel.expert),
-  new Skill('CSS', SkillLevel.expert),
-  new Skill('Javascript', SkillLevel.expert),
-  new Skill('Typescript', SkillLevel.expert),
-  new Skill('Angular', SkillLevel.expert),
-  new Skill('React', SkillLevel.advance),
-  new Skill('Next.js', SkillLevel.advance),
-  new Skill('Tailwind', SkillLevel.expert),
-  new Skill('Bootstrap', SkillLevel.expert),
-  new Skill('Material UI', SkillLevel.expert),
+export const PROJECT_NAMES: Record<string, string> = {
+  'vitrin.splus.ir': 'the Vitrin app',
+  'map.splus.ir': 'the map app',
+  'l.splus.ir': 'the link scanner',
+  'bui.splus.ir': 'the cross-messenger gateway panel',
+};
+
+export interface Job {
+  company: string;
+  role: string;
+  dates: string;
+  current?: boolean;
+  stack: string[];
+  achievements: string[];
+}
+
+export const EXPERIENCE: Job[] = [
+  {
+    company: 'Mohaymen · Soroush Plus Messenger',
+    role: 'Senior Backend Developer',
+    dates: 'Aug 2025 – Present',
+    current: true,
+    stack: ['Java', 'Spring Boot', 'Oracle', 'Kafka', 'Redis', 'Kubernetes', 'Ceph S3', 'CI/CD'],
+    achievements: [
+      'Built business.splus.ir so businesses can send bulk messages across multiple messengers through one gateway.',
+      'Added advertising tools that let businesses manage messenger campaigns from the gateway.',
+    ],
+  },
+  {
+    company: 'Mohaymen · Soroush Plus Messenger',
+    role: 'Senior Full-Stack Developer',
+    dates: 'Dec 2022 – Aug 2025',
+    stack: [
+      'TypeScript',
+      'React',
+      'React Native',
+      'WebSocket',
+      'Laravel',
+      'PHP',
+      'MySQL',
+      'Nginx',
+      'Tailwind CSS',
+      'Kubernetes',
+      'CI/CD',
+    ],
+    achievements: [
+      'Built and maintained the messenger at web.splus.ir and adapted the web app into a React Native mobile client.',
+      'Delivered vitrin.splus.ir, map.splus.ir, and l.splus.ir, along with the accounts and administration panels.',
+      'Developed the Gangsters game backend, bui.splus.ir, and the website and management tools for soroushplus.com.',
+    ],
+  },
+  {
+    company: 'Hamyar Sanat',
+    role: 'Senior Full-Stack PHP Developer',
+    dates: '2020 – May 2022',
+    stack: [
+      'PHP',
+      'Laravel',
+      'Angular',
+      'TypeScript',
+      'MySQL',
+      'Elasticsearch',
+      'Nginx',
+      'Tailwind CSS',
+    ],
+    achievements: [
+      'Built three business applications for customer relationship management, accounting, and treasury operations.',
+      'Developed and maintained both the Laravel backends and the Angular interfaces for all three applications.',
+    ],
+  },
+  {
+    company: 'Efadd',
+    role: 'Senior Full-Stack PHP Developer',
+    dates: '2017 – 2020',
+    stack: ['PHP', 'Laravel', 'MySQL', 'RabbitMQ', 'Nginx'],
+    achievements: [
+      'Built shipment and accounting systems for distribution agencies and Iran National Post parcel operations.',
+      'Developed warehouse software for central and provincial facilities, plus CRM, treasury, and centralized accounting systems for the holding company.',
+    ],
+  },
+  {
+    company: 'Selak Pardaz',
+    role: 'Mid-Level Full-Stack PHP Developer',
+    dates: 'Jun 2017 – Dec 2017',
+    stack: ['PHP', 'Laravel', 'MySQL', 'Nginx', 'Bootstrap', 'jQuery'],
+    achievements: [
+      'Built the diet-plan generator for rejim.ir and a student management system that let teachers review student performance.',
+    ],
+  },
+  {
+    company: 'Freelance',
+    role: 'Mid-Level Full-Stack PHP Developer',
+    dates: '2014 – 2017',
+    stack: ['PHP', 'Laravel', 'MySQL', 'Nginx', 'Bootstrap', 'jQuery'],
+    achievements: ['Built and maintained nearly 20 client websites using PHP and Laravel.'],
+  },
+  {
+    company: 'Nahal Nik Royesh',
+    role: 'Junior Backend PHP Developer',
+    dates: '2013 – 2014',
+    stack: ['PHP', 'Apache', 'MySQL', 'Bootstrap', 'jQuery'],
+    achievements: [
+      'Developed the backends for the artibition.net store and PAD, a social information portal.',
+    ],
+  },
 ];
 
-export const SERVER_SIDE_SKILLS: Skill[] = [
-  new Skill('Java', SkillLevel.expert),
-  new Skill('Spring Boot', SkillLevel.advance),
-  new Skill('Oracle', SkillLevel.advance),
-  new Skill('SQL', SkillLevel.expert),
-  new Skill('Kafka', SkillLevel.advance),
-  new Skill('Redis', SkillLevel.medium),
-  new Skill('PHP', SkillLevel.expert),
-  new Skill('Laravel', SkillLevel.expert),
-  new Skill('MariaDB', SkillLevel.expert),
-  new Skill('Nginx', SkillLevel.advance),
-  new Skill('Elasticsearch', SkillLevel.advance),
+export const SKILLS = [
+  { title: 'Backend', names: ['Java', 'Spring Boot', 'Node.js', 'PHP', 'Laravel'] },
+  {
+    title: 'Frontend',
+    names: [
+      'TypeScript',
+      'JavaScript',
+      'React',
+      'Next.js',
+      'Angular',
+      'React Native',
+      'HTML',
+      'CSS',
+      'Tailwind CSS',
+      'Bootstrap',
+      'Material UI',
+    ],
+  },
+  {
+    title: 'Data & messaging',
+    names: [
+      'SQL',
+      'Oracle',
+      'MySQL',
+      'MariaDB',
+      'Redis',
+      'Kafka',
+      'RabbitMQ',
+      'Elasticsearch',
+      'WebSocket',
+    ],
+  },
+  {
+    title: 'Infrastructure',
+    names: ['Docker', 'Kubernetes', 'Docker Swarm', 'Nginx', 'Linux', 'Bash', 'Ceph S3'],
+  },
+  {
+    title: 'Delivery & tooling',
+    names: ['Git', 'GitLab', 'GitHub', 'CI/CD', 'Prometheus', 'Grafana', 'Postman', 'Swagger'],
+  },
 ];
 
-export const DEVOPS_SKILLS: Skill[] = [
-  new Skill('Linux', SkillLevel.advance),
-  new Skill('Bash', SkillLevel.advance),
-  new Skill('Git', SkillLevel.expert),
-  new Skill('Docker', SkillLevel.expert),
-  new Skill('Docker Swarm', SkillLevel.advance),
-  new Skill('Kubernetes', SkillLevel.medium),
-  new Skill('CI/CD', SkillLevel.medium),
-  new Skill('GitLab', SkillLevel.expert),
-  new Skill('GitHub', SkillLevel.expert),
-  new Skill('Prometheus', SkillLevel.advance),
-  new Skill('Grafana', SkillLevel.advance),
-  new Skill('Postman', SkillLevel.expert),
-  new Skill('Swagger', SkillLevel.medium),
+export const EDUCATION = [
+  {
+    title: 'Associate Degree in Computer Software',
+    school: 'Enghelab-e Eslami Technical College',
+    year: '2015',
+    grade: '17/20',
+  },
+  {
+    title: 'Diploma in Computer Software',
+    school: 'Shahid Ghasemi Conservatory',
+    year: '2012',
+    grade: '18/20',
+  },
 ];
 
-export const LANGUAGE_SKILLS: SkillSection[] = [
-  new SkillSection('Persian - Native', [
-    new Skill('Reading', SkillLevel.expert),
-    new Skill('Writing', SkillLevel.expert),
-    new Skill('Speaking', SkillLevel.expert),
-    new Skill('Listening', SkillLevel.expert),
-  ]),
-  new SkillSection('English', [
-    new Skill('Reading', SkillLevel.advance),
-    new Skill('Writing', SkillLevel.advance),
-    new Skill('Speaking', SkillLevel.advance),
-    new Skill('Listening', SkillLevel.advance),
-  ]),
+export const CERTIFICATIONS = [
+  { title: 'React.js', institution: 'Sematec', year: '2023', grade: '95/100', file: 'reactjs.jpg' },
+  {
+    title: 'Development and Operations Administration Pack',
+    institution: 'Sematec',
+    year: '2022',
+    grade: '100/100',
+    file: 'devops.png',
+  },
+  {
+    title: 'Linux Fundamentals and Basic Administration',
+    institution: 'Sematec',
+    year: '2022',
+    grade: '95/100',
+    file: 'lpic1.jpg',
+  },
+  {
+    title: 'Java Standard & Enterprise Edition',
+    institution: 'Laitec',
+    year: '2022',
+    grade: '100/100',
+    file: 'j2ee.jpg',
+  },
 ];
 
-export const EDUCATIONS: UlList[] = [
-  new UlList('Associate in Computer', [
-    'Branch: Software Engineer',
-    'University: Enghelab-e Eslami Technical College',
-    'Location: Tehran, Iran',
-    'Graduated: 2015',
-    'GPA: 17/20',
-  ]),
-  new UlList('Diploma in Computer', [
-    'Branch: Software Engineer',
-    'School: Shahid Ghasemi Conservatory',
-    'Location: Tehran, Iran',
-    'Graduated: 2012',
-    'GPA: 18/20',
-  ]),
-];
-
-export const EXPERIENCE: UlList[] = [
-  new UlList('Backend Developer', [
-    'Company: Mohaymen CO ( Soroush Plus Messenger )',
-    'Position: Senior Backend Developer',
-    'Location: Tehran, Iran',
-    'Date: Aug 2025 - Now',
-    'Technologies: Java, Spring Boot, Oracle, Kafka, Redis, CI/CD, Kubernetes, Ceph S3 Storage',
-    new UlList('Achievements:', [
-      'Created business.splus.ir, a unified gateway for bulk messaging across messengers',
-      'Built messenger advertising management for campaigns on business.splus.ir',
-    ]),
-  ]),
-  new UlList('Full Stack Developer', [
-    'Company: Mohaymen CO ( Soroush Plus Messenger )',
-    'Position: Senior Full Stack Developer',
-    'Location: Tehran, Iran',
-    'Date: DEC 2022 - Aug 2025',
-    'Technologies: PHP, Laravel, Nginx, Mysql, CI/CD, Kubernetes, Typescript, ReactJS, WebSocket, Tailwind',
-    new UlList('Achievements:', [
-      'Implementation and maintenance of the web APP of Soroush Plus messenger web.splus.ir',
-      'Implementation and maintenance of the vitrin APP for Soroush Plus messenger vitrin.splus.ir',
-      'Implementation and maintenance of the messenger management panel and internal modules',
-      'Implementation and maintenance of the link scanner service for Soroush Plus messenger l.splus.ir',
-      'Implementation and maintenance of the map APP for Soroush Plus map.splus.ir',
-      'Implementation and maintenance of the accounts panel for Soroush Plus messenger',
-      'Implementation and maintenance of the backend for Gangsters game',
-      'Implementation and maintenance of the react Native version of Soroush Plus messenger based on the web APP',
-      'Implementation and maintenance of the intermediate gateway panel for sending messages in messengers bui.splus.ir',
-      'Implementation and maintenance of the Soroush Plus website and management panel soroushplus.com',
-    ]),
-  ]),
-  new UlList('Full Stack PHP Developer', [
-    'Company: Hamyar Sanat Co',
-    'Position: Senior Full Stack PHP Developer',
-    'Location: Tehran, Iran',
-    'Date: 2020 - May 2022',
-    'Technologies: PHP, Laravel, Nginx, Mysql, Elasticsearch, Typescript, Angular, Tailwind',
-    new UlList('Achievements:', [
-      'Implementation and maintenance of the customer relationship management ( CRM ) including backend with Laravel and front with Angular',
-      'Implementation and maintenance of the accounting management system including backend with Laravel and front with Angular',
-      'Implementation and maintenance of the treasury management system including backend with Laravel and front with Angular',
-    ]),
-  ]),
-  new UlList('Full Stack PHP Developer', [
-    'Company: Efadd Co',
-    'Position: Senior Full Stack PHP Developer',
-    'Location: Tehran, Iran',
-    'Date: 2017 - 2020',
-    'Technologies: PHP, Laravel, Nginx, Mysql ,Rabbitmq',
-    new UlList('Achievements:', [
-      'Implementation and maintenance of the customer relationship management system ( CRM )',
-      'Implementation and maintenance of the shipment management system by distribution agencies in the provinces',
-      'Implementation and maintenance of the accounting system for parcel shipment and distribution representatives',
-      'Implementation and maintenance of the central and distributed warehouse system in the provinces',
-      'Implementation and maintenance of the parcel shipment system by Iran National Post',
-      'Implementation and maintenance of the accounting system for the intermediate system of Iran National Post',
-      'Implementation and maintenance of the internal treasury system of the holding',
-      'Implementation of the centralized accounting system of the holding',
-    ]),
-  ]),
-  new UlList('Full Stack PHP Developer', [
-    'Company: Selak Pardaz Co',
-    'Position: Mid-Level Full Stack PHP Developer',
-    'Location: Tehran, Iran',
-    'Date: June 2017 - December 2017',
-    'Technologies: PHP, Laravel, Nginx, Mysql, Bootstrap, jquery',
-    new UlList('Achievements:', [
-      'Implementation of the diet generation system rejim.ir',
-      'Implementation of the student management system by teachers and review and control of student performance',
-    ]),
-  ]),
-  new UlList('Full Stack PHP Developer', [
-    'Freelancer',
-    'Position: Mid-Level Full Stack PHP Developer',
-    'Location: Tehran, Iran',
-    'Date: 2014 - 2017',
-    'Technologies: PHP, Laravel, Nginx, Mysql, Bootstrap, jquery',
-    new UlList('Achievements:', ['Implementation and maintenance of nearly 20 sites']),
-  ]),
-  new UlList('Backend PHP Developer', [
-    'Company: Nahal Nik Royesh CO',
-    'Position: Junior Backend PHP Developer',
-    'Location: Tehran, Iran',
-    'Date: 2013 - 2014',
-    'Technologies: PHP Pure, Apache, Mysql, Bootstrap, jquery',
-    new UlList('Achievements:', [
-      'Implementation of the backend for the artibition.net store',
-      'Implementation of the backend for the social Information Portal (PAD)',
-    ]),
-  ]),
-];
-
-export const CERTIFICATIONS: UlList[] = [
-  new UlList('ReactJs', [
-    'Institutions: Sematec Co',
-    'Location: Tehran, Iran',
-    'Date: 2023',
-    'GPA: 95/100',
-    new ULListImage('/assets/cert/reactjs.jpg', 'غلامرضا فداکار ریکت'),
-  ]),
-  new UlList('Development And Operations Administration Pack', [
-    'Institutions: Sematec Co',
-    'Location: Tehran, Iran',
-    'Date: 2022',
-    'GPA : 100/100',
-    new ULListImage('/assets/cert/devops.png', 'غلامرضا فداکار دواپس'),
-  ]),
-  new UlList('Linux Fundamentals And Basic Administration', [
-    'Institutions: Sematec Co',
-    'Location: Tehran, Iran',
-    'Date: 2022',
-    'GPA : 95/100',
-    new ULListImage('/assets/cert/lpic1.jpg', 'غلامرضا فداکار لینوکس'),
-  ]),
-  new UlList('Java Standard & Enterprise Edition', [
-    'Institutions: Laitec Co',
-    'Location: Tehran, Iran',
-    'Date: 2022',
-    'GPA : 100/100',
-    new ULListImage('/assets/cert/j2ee.jpg', 'غلامرضا فداکار جاوا'),
-  ]),
+export const LANGUAGES = [
+  { name: 'Persian', level: 'Native' },
+  { name: 'English', level: 'Advanced' },
 ];

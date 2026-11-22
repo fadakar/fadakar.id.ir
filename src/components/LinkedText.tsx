@@ -1,3 +1,4 @@
+import { PROJECT_NAMES } from '../settings';
 import { Fragment, type ReactNode } from 'react';
 
 interface Props {
@@ -23,9 +24,9 @@ const LinkedText = ({ text }: Props) => {
         href={`https://${domain}`}
         target='_blank'
         rel='noopener noreferrer'
-        className='font-medium text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent'
+        className='text-link'
       >
-        {domain}
+        {PROJECT_NAMES[domain] ?? domain}
       </a>,
     );
     last = index + domain.length;

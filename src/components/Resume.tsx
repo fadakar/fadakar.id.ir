@@ -1,54 +1,127 @@
-import { ExperienceList, SkillList } from './index';
 import {
   CERTIFICATIONS,
-  CLIENT_SIDE_SKILLS,
-  DEVOPS_SKILLS,
-  EDUCATIONS,
-  EXPERIENCE,
-  LANGUAGE_SKILLS,
-  SERVER_SIDE_SKILLS,
-  SUMMERY,
+  EDUCATION,
+  INFORMATION as person,
+  LANGUAGES,
+  SKILLS,
+  SUMMARY,
 } from '../settings';
-import { Card } from './index';
-import { ULList } from './index';
-import LinkedText from './LinkedText';
-const Resume = () => {
+import Portrait from './layout/Aside';
+import ExperienceList from './ExperienceList';
+import Icon from './Icon';
+import SectionNav from './SectionNav';
+
+function Overview() {
   return (
-    <>
-      <Card title={'Summary'} id='summary'>
-        <div className='space-y-3 text-base leading-7 text-ink print:space-y-1 print:text-[11px] print:leading-snug'>
-          {SUMMERY.split('\n')
-            .map((line) => line.trim())
-            .filter(Boolean)
-            .map((line) => (
-              <p key={line}>
-                <LinkedText text={line} />
-              </p>
-            ))}
+    <section id='summary' className='cover' aria-labelledby='person-name'>
+      <div className='container hero'>
+        <div className='intro'>
+          <p className='profession'>{person.position}</p>
+          <h1 id='person-name'>
+            Gholamreza <em>Fadakar</em>
+          </h1>
+          <p className='location'>
+            {person.location}
+            <span aria-hidden='true'>·</span>Building software since {person.careerStart}
+          </p>
+          <p className='summary-copy'>{SUMMARY}</p>
+          <a className='contact-link' href={'mailto:' + person.email}>
+            <Icon name='mail' />
+            {person.email}
+          </a>
+          <div className='print-contact'>
+            <a href={'mailto:' + person.email}>{person.email}</a>
+            <span>{person.location}</span>
+            <a href={'tel:' + person.phone}>{person.phone}</a>
+            <a href={person.website}>fdkr.ir</a>
+            <a href={person.github}>github.com/fadakar</a>
+            <a href={person.linkedin}>LinkedIn profile</a>
+          </div>
         </div>
-      </Card>
-      <ExperienceList items={EXPERIENCE} />
-      <Card title={'Skills'} id='skills'>
-        <SkillList bare title={'Client'} skills={CLIENT_SIDE_SKILLS} />
-        <SkillList bare title={'Server'} skills={SERVER_SIDE_SKILLS} />
-        <SkillList bare title={'Tools'} skills={DEVOPS_SKILLS} />
-      </Card>
-      <Card title={'Education'} id='education'>
-        <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 print:grid-cols-2 print:gap-3'>
-          {EDUCATIONS.map((ulList, i) => {
-            return <ULList key={i} title={ulList.title} items={ulList.items} />;
-          })}
-        </div>
-      </Card>
-      <Card title={'Certification'} id='certification'>
-        <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 print:grid-cols-2 print:gap-2'>
-          {CERTIFICATIONS.map((ulList, i) => {
-            return <ULList key={i} title={ulList.title} items={ulList.items} />;
-          })}
-        </div>
-      </Card>
-      <SkillList id='languages' title={'Languages'} skills={LANGUAGE_SKILLS} />
-    </>
+        <Portrait />
+      </div>
+    </section>
   );
-};
+}
+
+function Skills() {
+  return (
+    <section className='skills-panel' id='skills'>
+      <h2>Technical skills</h2>
+      <dl className='skill-list'>
+        {SKILLS.map(({ title, names }) => (
+          <div className='skill-group' key={title}>
+            <dt>{title}</dt>
+            <dd>{names.join(', ')}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
+
+function Credentials() {
+  return (
+    <section className='credentials' id='education' aria-labelledby='credentials-title'>
+      <h2 id='credentials-title'>Credentials</h2>
+      <div className='credential-grid'>
+        <div>
+          <h3>Education</h3>
+          {EDUCATION.map((entry) => (
+            <article className='education-item' key={entry.title}>
+              <p className='entry-meta'>{entry.year} · Tehran, Iran</p>
+              <h4>{entry.title}</h4>
+              <p>
+                {entry.school} · GPA {entry.grade}
+              </p>
+            </article>
+          ))}
+        </div>
+        <div id='certification'>
+          <h3>Certifications</h3>
+          {CERTIFICATIONS.map((cert) => (
+            <a
+              className='certificate'
+              key={cert.title}
+              href={'/assets/cert/' + cert.file}
+              target='_blank'
+              rel='noreferrer'
+            >
+              <span>
+                <strong>{cert.title}</strong>
+                <small>
+                  {cert.institution} · {cert.year} · {cert.grade}
+                </small>
+              </span>
+            </a>
+          ))}
+        </div>
+        <div id='languages' className='languages'>
+          <h3>Languages</h3>
+          <dl>
+            {LANGUAGES.map((language) => (
+              <div key={language.name}>
+                <dt>{language.name}</dt>
+                <dd>{language.level}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const Resume = () => (
+  <>
+    <Overview />
+    <SectionNav />
+    <div className='container resume-sections'>
+      <ExperienceList />
+      <Skills />
+      <Credentials />
+    </div>
+  </>
+);
+
 export default Resume;
