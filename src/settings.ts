@@ -16,7 +16,7 @@ export const INFORMATION = {
 };
 
 export const SUMMARY =
-  'I build messaging software at Soroush Plus, including its web client and bulk-messaging gateway. Previously, I developed parcel systems for Iran National Post and financial software for Hamyar Sanat.';
+  'I build messaging software at Soroush Plus, from the web client to the gateway businesses use to reach customers across messengers.';
 
 export const PROJECT_NAMES: Record<string, string> = {
   'vitrin.splus.ir': 'the Vitrin app',

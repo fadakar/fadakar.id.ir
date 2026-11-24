@@ -1,47 +1,38 @@
 import { useTheme } from '../../hooks/useTheme';
-import { toggleThemeAt } from '../../theme/theme';
-
-const MoonIcon = () => (
-  <svg viewBox='0 0 24 24' width='18' height='18' fill='none' aria-hidden>
-    <path
-      d='M20 14.6A8.2 8.2 0 0 1 9.4 4 7.2 7.2 0 1 0 20 14.6Z'
-      stroke='currentColor'
-      strokeWidth='1.5'
-      strokeLinejoin='round'
-    />
-  </svg>
-);
-
-const SunIcon = () => (
-  <svg viewBox='0 0 24 24' width='18' height='18' fill='none' aria-hidden>
-    <circle cx='12' cy='12' r='3.25' stroke='currentColor' strokeWidth='1.5' />
-    <path
-      d='M12 3.5v1.75M12 18.75V20.5M3.5 12h1.75M18.75 12H20.5M6.1 6.1l1.25 1.25M16.65 16.65l1.25 1.25M17.9 6.1l-1.25 1.25M7.35 16.65 6.1 17.9'
-      stroke='currentColor'
-      strokeWidth='1.5'
-      strokeLinecap='round'
-    />
-  </svg>
-);
 
 const ThemeToggle = () => {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const dark = theme === 'dark';
-
   return (
     <button
       type='button'
       className='theme-toggle'
-      onClick={(event) => {
-        const rect = event.currentTarget.getBoundingClientRect();
-        toggleThemeAt(rect.left + rect.width / 2, rect.top + rect.height / 2);
-      }}
+      onClick={toggleTheme}
       aria-pressed={dark}
-      aria-label={dark ? 'Light mode' : 'Dark mode'}
+      aria-label='Dark mode'
+      title={dark ? 'Use light mode' : 'Use dark mode'}
     >
-      {dark ? <SunIcon /> : <MoonIcon />}
+      <svg
+        viewBox='0 0 24 24'
+        width='18'
+        height='18'
+        fill='none'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        aria-hidden='true'
+      >
+        {dark ? (
+          <>
+            <circle cx='12' cy='12' r='3.25' />
+            <path d='M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19m0-14-1.5 1.5m-11 11L5 19' />
+          </>
+        ) : (
+          <path d='M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z' />
+        )}
+      </svg>
     </button>
   );
 };
-
 export default ThemeToggle;

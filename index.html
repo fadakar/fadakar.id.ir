@@ -28,7 +28,7 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="غلامرضا فداکار" />
-    <meta name="theme-color" content="#102e34" />
+    <meta name="theme-color" content="#fafbfe" />
     <script>
       (function () {
         try {
@@ -36,7 +36,7 @@
           var theme = stored === 'light' || stored === 'dark' ? stored : 'light';
           document.documentElement.setAttribute('data-theme', theme);
           var themeColor = document.querySelector('meta[name="theme-color"]');
-          if (themeColor) themeColor.setAttribute('content', theme === 'dark' ? '#0e2429' : '#102e34');
+          if (themeColor) themeColor.setAttribute('content', theme === 'dark' ? '#141a28' : '#fafbfe');
         } catch (e) {}
       })();
     </script>
@@ -112,12 +112,13 @@
       {
         "@context": "https://schema.org",
         "@type": "SiteNavigationElement",
-        "name": ["Overview", "Experience", "Skills", "Credentials", "Download PDF"],
+        "name": ["Overview", "Experience", "Skills", "Credentials", "Contact", "Download PDF"],
         "url": [
           "https://fdkr.ir/#summary",
           "https://fdkr.ir/#experience",
           "https://fdkr.ir/#skills",
           "https://fdkr.ir/#education",
+          "https://fdkr.ir/#contact",
           "https://fdkr.ir/assets/pdf/gholamreza-fadakar-resume.pdf"
         ]
       }

@@ -1,56 +1,81 @@
 import { useState } from 'react';
-import { EXPERIENCE, type Job } from '../settings';
+import { EXPERIENCE } from '../settings';
 import Icon from './Icon';
 import LinkedText from './LinkedText';
 
-function Role({ job, index }: { job: Job; index: number }) {
-  const [expanded, setExpanded] = useState(index === 0);
+export default function ExperienceList() {
+  const [opened, setOpened] = useState<Set<number>>(() => new Set([0]));
+  const allOpen = opened.size === EXPERIENCE.length;
+
+  const toggle = (index: number) =>
+    setOpened((previous) => {
+      const next = new Set(previous);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+
   return (
-    <article
-      className={'role' + (job.current ? ' current' : '') + (index === 4 ? ' earlier-start' : '')}
-    >
-      {index === 4 && <h2 className='print-earlier'>Earlier experience</h2>}
-      <h3>
+    <section id='experience' className='chapter experience' aria-labelledby='experience-title'>
+      <div className='chapter-heading'>
+        <h2 id='experience-title'>Work experience</h2>
+        <span className='chapter-rule' />
         <button
+          className='expand-all'
           type='button'
-          className='role-toggle'
-          onClick={() => setExpanded(!expanded)}
-          aria-expanded={expanded}
-          aria-controls={'role-' + index}
+          onClick={() => setOpened(allOpen ? new Set() : new Set(EXPERIENCE.map((_, i) => i)))}
         >
-          <span className='role-main'>
-            <span className='role-date'>{job.dates}</span>
-            <span className='role-title'>{job.role}</span>
-            <span className='role-company'>{job.company}</span>
-          </span>
-          <span className='disclosure-icon'>
-            <Icon name={expanded ? 'minus' : 'plus'} />
-          </span>
+          <Icon name={allOpen ? 'minus' : 'plus'} />
+          {allOpen ? 'Collapse all' : 'Expand all'}
         </button>
-      </h3>
-      <div id={'role-' + index} className='role-details' data-expanded={expanded}>
-        <ul className='accomplishments'>
-          {job.achievements.map((achievement) => (
-            <li key={achievement}>
-              <LinkedText text={achievement} />
-            </li>
-          ))}
-        </ul>
-        <p className='role-stack'>{job.stack.join(' · ')}</p>
       </div>
-    </article>
+      <div className='timeline'>
+        {EXPERIENCE.map((job, i) => (
+          <article
+            className='role'
+            data-current={!!job.current}
+            data-open={opened.has(i)}
+            key={job.company + job.dates}
+          >
+            {i === 4 && <h2 className='print-earlier'>Earlier experience</h2>}
+            <h3>
+              <button
+                type='button'
+                className='role-toggle'
+                aria-expanded={opened.has(i)}
+                aria-controls={'role-' + i}
+                onClick={() => toggle(i)}
+              >
+                <span className='role-date'>
+                  <i aria-hidden='true' />
+                  {job.dates}
+                </span>
+                <span className='role-main'>
+                  <span className='role-title'>{job.role}</span>
+                  <span className='role-company'>{job.company}</span>
+                </span>
+                <span className='disclosure-icon'>
+                  <Icon name={opened.has(i) ? 'minus' : 'plus'} />
+                </span>
+              </button>
+            </h3>
+            <div className='role-details' id={'role-' + i}>
+              <ul className='accomplishments'>
+                {job.achievements.map((achievement) => (
+                  <li key={achievement}>
+                    <LinkedText text={achievement} />
+                  </li>
+                ))}
+              </ul>
+              <ul className='role-stack' aria-label='Technologies used'>
+                {job.stack.map((tool) => (
+                  <li key={tool}>{tool}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
-
-const ExperienceList = () => (
-  <section id='experience' className='experience'>
-    <h2>Experience</h2>
-    <div className='timeline'>
-      {EXPERIENCE.map((job, index) => (
-        <Role key={job.company + job.dates} job={job} index={index} />
-      ))}
-    </div>
-  </section>
-);
-
-export default ExperienceList;
