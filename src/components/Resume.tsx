@@ -10,40 +10,27 @@ import ExperienceList from './ExperienceList';
 import Icon, { type IconName } from './Icon';
 import PacketFlow from './PacketFlow';
 
+const familyNameStart = person.name.lastIndexOf(' ') + 1;
+
 function Overview() {
   return (
     <section id='summary' className='cover' aria-labelledby='person-name'>
-      <div className='container hero'>
-        <div className='intro'>
-          <div className='identity-line'>
-            <span className='identity-note'>
-              <Icon name='pin' />
+      <PacketFlow>
+        <header className='hero-copy'>
+          <div className='record-value identity-record' data-record='1'>
+            <h1 id='person-name'>
+              {person.name.slice(0, familyNameStart)}
+              <em>{person.name.slice(familyNameStart)}</em>
+            </h1>
+            <p className='profession'>{person.position}</p>
+            <p className='identity-note'>
               {person.location}
-            </span>
-            <span className='avatar'>
-              <img
-                src={person.profileImage}
-                alt={person.nameFa}
-                lang='fa'
-                width='72'
-                height='72'
-                fetchPriority='high'
-              />
-            </span>
-            <span className='identity-note'>
-              Since {person.careerStart}
-              <Icon name='clock' />
-            </span>
+              <span aria-hidden='true'>·</span>Since {person.careerStart}
+            </p>
           </div>
-          <h1 id='person-name'>
-            Gholamreza <em>Fadakar</em>
-          </h1>
-          <p className='profession'>
-            <span aria-hidden='true' />
-            {person.position}
-            <span aria-hidden='true' />
+          <p className='record-value summary-copy' id='profile-summary' data-record='2'>
+            {SUMMARY}
           </p>
-          <p className='summary-copy'>{SUMMARY}</p>
           <div className='hero-actions'>
             <a className='button primary' href='#experience'>
               View experience <Icon name='down' />
@@ -60,9 +47,8 @@ function Overview() {
             <a href={person.github}>github.com/fadakar</a>
             <a href={person.linkedin}>LinkedIn profile</a>
           </div>
-        </div>
-        <PacketFlow />
-      </div>
+        </header>
+      </PacketFlow>
     </section>
   );
 }
